@@ -4,7 +4,7 @@ use ieee.numeric_std.all;
 
 entity Comparator is
     generic(
-        width : positive := 6
+        width : positive := 8
      );
     port(
         in_a : in unsigned(width-1 downto 0);   --Entrada 1

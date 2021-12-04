@@ -6,7 +6,7 @@ use ieee.std_logic_arith.ALL;
 -- Módulo que gestiona la salida del RGB (procesado de los valores de la fsm a PWM
 
 entity OUTPUT_MODULE is
-    generic(width : positive := 6;          -- Tamaño de las variables
+    generic(width : positive := 8;          -- Tamaño de las variables
             level_range : positive := 40    -- Nº de niveles RGB posible
             );
     port(clk : in std_logic;           --Clock
@@ -28,8 +28,8 @@ signal prescaler_out : std_logic;
 
     COMPONENT Counter
     GENERIC(
-            width : positive := 6;
-            mod_count : positive := 40
+            width : positive := 8;
+            mod_count : positive := 50
             );
     PORT(
         clk : in std_logic;                           --Clock
@@ -45,7 +45,7 @@ signal prescaler_out : std_logic;
     
     COMPONENT Comparator
     GENERIC(
-            width : positive := 6
+            width : positive := 8
             );
     PORT(
         in_a : in unsigned(width-1 downto 0);   --Entrada 1

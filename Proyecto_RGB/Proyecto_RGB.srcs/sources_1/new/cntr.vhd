@@ -6,8 +6,8 @@ use ieee.numeric_std.all;
 --Permite cuenta arriba y cuenta abajo
 
 entity Counter is
-    generic(width : positive := 6;
-            mod_count : positive := 40
+    generic(width : positive := 8;
+            mod_count : positive := 50
         );
     PORT (
         clk : in std_logic;                           --Clock
