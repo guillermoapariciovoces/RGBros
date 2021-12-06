@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Dec  6 12:22:33 2021
+# Process ID: 14028
+# Current directory: D:/Documents/RGBros/Proyecto_RGB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12832 D:\Documents\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
+# Log file: D:/Documents/RGBros/Proyecto_RGB/vivado.log
+# Journal file: D:/Documents/RGBros/Proyecto_RGB\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.xpr
+update_compile_order -fileset sources_1

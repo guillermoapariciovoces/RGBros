@@ -2,15 +2,6 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_arith.ALL;
 
-package Mux_hot_pkg is
-        type std_logic_array is array(natural range <>) of std_logic_vector;
-end package;
-
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_arith.ALL;
-use work.Mux_hot_pkg.all;
-
 entity INTERFACE_MODULE is
     generic(
             width : positive := 8       --Tamaño de palabra de los valores
@@ -23,13 +14,19 @@ entity INTERFACE_MODULE is
          blue_in : in std_logic_vector(width-1 downto 0);       --Entrada de componente azul (byte)
          color_select : in std_logic_vector(0 to 2);            --Color seleccionado -> Importante, en formato ONE HOT (r,g,b)
          -- r->(1 0 0), g->(0 1 0), b->(0 0 1)
-         anode : out std_logic_vector (7 downto 0);             --Selección de ánodo en la placa -> Importante NO NEGADO
+         anode : out std_logic_vector (7 downto 0);             --Selección de ánodo en la placa -> Importante NEGADO
          segment : out std_logic_vector (6 downto 0)            --Control común de segmentos del display
     );
 end INTERFACE_MODULE;
 
 
 architecture behavioral of INTERFACE_MODULE is
+    
+    subtype vec1_t is std_logic_vector(width-1 downto 0);
+    type arr1_tt is array(3-1 downto 0) of vec1_t;
+    subtype vec2_t is std_logic_vector(7-1 downto 0);
+    type arr2_tt is array(8-1 downto 0) of vec1_t;
+    
     
     COMPONENT Prescaler
     GENERIC(
@@ -61,7 +58,7 @@ architecture behavioral of INTERFACE_MODULE is
             width : positive := 8
     );
     port(
-        input : in std_logic_array(integer range inputs-1 downto 0)(width-1 downto 0);  --OJO, que puede no funcionar la el array
+        input : in arr1_tt;  --OJO, que puede no funcionar la el array
         --input2 : in unsigned(width-1 downto 0);
         --input3 : in unsigned(width-1 downto 0);
         selector : in std_logic_vector (inputs-1 downto 0);
@@ -96,7 +93,7 @@ architecture behavioral of INTERFACE_MODULE is
 
    
     --Formateado a array de la entrada para Mux_1
-    signal mux1_in : std_logic_array(2 downto 0);
+    signal mux1_in : arr1_tt;
     
     --Señales en formato nativo
     signal color_value : std_logic_vector(width-1 downto 0);
@@ -113,7 +110,7 @@ architecture behavioral of INTERFACE_MODULE is
     signal number_output3 : std_logic_vector(6 downto 0);
     
     --Formateado a array de la entrada para Mux_2
-    signal mux2_in : std_logic_array(7 downto 0);
+    signal mux2_in : arr2_tt;
     
     --Salida definitiva al display
     signal final_output : std_logic_vector(6 downto 0);
@@ -194,6 +191,6 @@ begin
        );
         
     segment <= final_output;
-    anode <= ciclo_selection;
+    anode <= not(ciclo_selection);      --recordemos que los ánodos en la placa van negados y eso
 
 end behavioral;

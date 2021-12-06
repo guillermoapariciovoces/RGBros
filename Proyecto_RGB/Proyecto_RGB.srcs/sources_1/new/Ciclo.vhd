@@ -24,7 +24,7 @@ begin
             hots_i <= ('1', others => '0');
         end if;
         if rising_edge(clk) then
-                hots_i <= hots_i(0) & hots(outputs-1 downto 1);
+                hots_i <= hots_i(0) & hots_i(outputs-1 downto 1);
         end if;
     end process;
     

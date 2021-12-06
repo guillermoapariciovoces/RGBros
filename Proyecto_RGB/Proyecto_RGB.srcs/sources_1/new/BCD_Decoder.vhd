@@ -1,7 +1,8 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-USE ieee.std_logic_arith.ALL;
 USE ieee.std_logic_unsigned.ALL;
+use ieee.std_logic_arith.ALL;
+
 
 
 entity BCD_Decoder is
@@ -25,11 +26,11 @@ begin
 
     for i in binx'range loop
         if bcd(3 downto 0) > "0100" then
-          bcd(3 downto 0) := std_logic_vector(unsigned( bcd(3 downto 0)) + "0011"); 
+          bcd(3 downto 0) := std_logic_vector(bcd(3 downto 0) + "0011"); 
 
         end if ;
         if bcd(7 downto 4) > "0100" then
-           bcd(7 downto 4) := std_logic_vector(unsigned( bcd(7 downto 4)) + "0011");    
+           bcd(7 downto 4) := std_logic_vector(bcd(7 downto 4) + "0011");   
         end if ;
         bcd := bcd(10 downto 0) & binx(7) ; 
         binx := binx(6 downto 0) & '0' ; 

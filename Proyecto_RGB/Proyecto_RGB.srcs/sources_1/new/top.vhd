@@ -5,9 +5,9 @@ use ieee.std_logic_arith.ALL;
 
 
 entity top is
-    PORT (  reset_n : in std_logic;                     --Reset (negado)
+    PORT(  reset_n : in std_logic;                     --Reset (negado)
             clk: in std_logic;                          --Reloj
-            button : in std_logic_vector(3 downto 0);  --Botones de selección
+            button : in std_logic_vector(3 downto 0);   --Botones de selección
             -- Orden: arriba, abajo, izda, dcha
             rgb: out std_logic_vector(2 downto 0);      --LED RGB
             led : out std_logic_vector(2 downto 0);     --LEDs auxiliares de nivel
@@ -20,60 +20,117 @@ architecture behavioral of top is
     signal sync2edge: std_logic_vector(3 downto 0);           --Señal que sale del sincronizador al detector de flancos
     signal edge2fsm: std_logic_vector(3 downto 0);            --Señal del detector de flancos a la máquina de estados
 
-    COMPONENT synchrnzr
-        generic(width : positive := 4
-        );
-        port ( 
-            clk : in std_logic;
-            async_in : in std_logic_vector(width-1 downto 0);
-            sync_out : out std_logic_vector(width-1 downto 0)
-        );
+    COMPONENT INPUT_MODULE
+        generic(
+            inputs : positive := 4
+            );
+        port(
+            clk : in std_logic;                                    --Clock
+            button_in: in std_logic_vector(inputs-1 downto 0);
+            button_out: out std_logic_vector(inputs-1 downto 0)
+            );
     END COMPONENT;
     
-    COMPONENT edgedtctr
-        generic(width : positive := 4
-        );
-        port ( 
-            clk : in std_logic;
-            sync_in : in std_logic_vector(width-1 downto 0);
-            edge : out std_logic_vector(width-1 downto 0)
-        );
+    COMPONENT FSM_MODULE
+        generic(
+                width : positive := 8
+                );
+        port(
+             reset_n     : in std_logic; --Reset Negado asincrono
+             clk         : in std_logic; --Reloj
+             button      : in std_logic_vector(3 downto 0);  --Botones de selección 
+             -- Orden: arriba (aumentar valor), abajo (decrementar valor), izda(B->G->R), dcha(R->G->B)
+             -- Suponemos 3                      2                            1            0
+             ROJO        : out std_logic_vector(width-1 downto 0); --Salida valor de Rojo (R)
+             VERDE       : out std_logic_vector(width-1 downto 0); --Salida valor de Verde (G)
+             AZUL        : out std_logic_vector(width-1 downto 0); --Salida valor de Azul (B)
+             Color_Select: out std_logic_vector(0 to 2)  --Color actual en seleccion (R, G, B)
+             );
     END COMPONENT;
     
-    COMPONENT fsm
-        PORT(
-            RESET : in std_logic;
-            CLK : in std_logic;
-            PUSHBUTTON : in std_logic;
-            LIGHT : out std_logic_vector(0 TO 3)
-        );
+    COMPONENT OUTPUT_MODULE
+        generic(
+            width : positive := 8;                      -- Tamaño de las variables
+            level_range : positive := 50;               -- Nº de niveles RGB posible
+            prescaler_reduction : positive := 100000    -- Reducción de la temporización para los 7-segmentos
+            );
+        port(
+            clk : in std_logic;                                    --Clock
+            reset_n : in std_logic;                                --Reset (negado)
+            red_in : in std_logic_vector(width-1 downto 0);        --Entrada de componente rojo (byte)
+            green_in : in std_logic_vector(width-1 downto 0);      --Entrada de componente verde (byte)
+            blue_in : in std_logic_vector(width-1 downto 0);       --Entrada de componente azul (byte)
+            red_out : out std_logic;                               --Salida de componente rojo (PWM)
+            green_out : out std_logic;                             --Salida de componente verde (PWM)
+            blue_out : out std_logic                               --Salida de componente azul (PWM)
+    );
     END COMPONENT;
     
-    COMPONENT decoder
-        PORT (
-            code : IN std_logic_vector(3 DOWNTO 0);
-            led : OUT std_logic_vector(6 DOWNTO 0)
+    COMPONENT INTERFACE_MODULE
+        generic(
+            width : positive := 8       --Tamaño de palabra de los valores
         );
+        port(
+            clk : in std_logic;                                    --Clock
+            reset_n : in std_logic;                                --Reset (negado)
+            red_in : in std_logic_vector(width-1 downto 0);        --Entrada de componente rojo (byte)
+            green_in : in std_logic_vector(width-1 downto 0);      --Entrada de componente verde (byte)
+            blue_in : in std_logic_vector(width-1 downto 0);       --Entrada de componente azul (byte)
+            color_select : in std_logic_vector(0 to 2);            --Color seleccionado -> Importante, en formato ONE HOT (r,g,b)
+            -- r->(1 0 0), g->(0 1 0), b->(0 0 1)
+            anode : out std_logic_vector (7 downto 0);             --Selección de ánodo en la placa -> Importante NO NEGADO
+            segment : out std_logic_vector (6 downto 0)            --Control común de segmentos del display
+            );
     END COMPONENT;
+    
+    signal button2fsm : std_logic_vector(3 downto 0);
+    
+    signal red_info : std_logic_vector(7 downto 0);
+    signal green_info : std_logic_vector(7 downto 0);
+    signal blue_info : std_logic_vector(7 downto 0);
+    signal color_info : std_logic_vector(0 to 2);
+    
+    signal red2output : std_logic;
+    signal green2output : std_logic;
+    signal blue2output : std_logic;
     
 begin
-    Inst_synchrnzr: synchrnzr PORT MAP(
+    Inst_input_module: INPUT_MODULE PORT MAP(
         clk => clk,
-        async_in => button,
-        sync_out => sync2edge
+        button_in => button,
+        button_out => button2fsm
     );
 
-    Inst_edgedtctr: edgedtctr PORT MAP(
+    Inst_fsm_module: FSM_MODULE PORT MAP(
+        reset_n => reset_n,
         clk => clk,
-        sync_in => sync2edge,
-        edge => edge2fsm
+        button => button2fsm,
+        ROJO => red_info,
+        VERDE => green_info,
+        AZUL => blue_info,
+        Color_Select => color_info
     );
 
-    Inst_fsm: fsm PORT MAP (
-       RESET => RESET,
-       CLK => clk,
-       PUSHBUTTON => edge2fsm,
-       LIGHT => LIGHT
+    Inst_output_module: OUTPUT_MODULE PORT MAP (
+       clk => clk,
+       reset_n => reset_n,
+       red_in => red_info,
+       green_in => green_info,
+       blue_in => blue_info,
+       red_out => red2output,
+       green_out => green2output,
+       blue_out => blue2output
     );
-
+    
+    Inst_interface_module: INTERFACE_MODULE PORT MAP (
+       clk => clk,
+       reset_n => reset_n,
+       red_in => red_info,
+       green_in => green_info,
+       blue_in => blue_info,
+       color_select => color_info,
+       anode => digctrl,
+       segment => segment
+    );
+    
 end behavioral;

@@ -1,43 +1,61 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 04.12.2021 09:02:59
--- Design Name: 
--- Module Name: INPUT_MODULE - behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
 entity INPUT_MODULE is
---  Port ( );
+    generic(
+            inputs : positive := 4
+            );
+    port(
+        clk : in std_logic;                                    --Clock
+        button_in: in std_logic_vector(inputs-1 downto 0);
+        button_out: out std_logic_vector(inputs-1 downto 0)
+         );
 end INPUT_MODULE;
+
 
 architecture behavioral of INPUT_MODULE is
 
+    signal sync2edge: std_logic_vector(inputs-1 downto 0);           --Señal que sale del sincronizador al detector de flancos
+
+    COMPONENT synchrnzr
+        generic(
+            inputs : positive := 4;     --Nº de pulsadores empleados
+            reg_size : positive := 2    --Tamaño del registro de desplazamiento
+            );
+        port( 
+            clk : in std_logic;        --Clock
+            async_in : in std_logic_vector(inputs-1 downto 0);   --Input (asynchronous)
+            sync_out : out std_logic_vector(inputs-1 downto 0)   --Outnput (synchronous)
+            );
+    END COMPONENT;
+    
+    
+    COMPONENT edgedtctr
+        generic(
+            inputs : positive := 4;     --Nº de pulsadores empleados
+            reg_size : positive := 2    --Tamaño del registro de desplazamiento
+        );
+        port( 
+            clk : in std_logic;                                  --Clock
+            sync_in : in std_logic_vector(inputs-1 downto 0);    --Input (from synchronizer)
+            edge : out std_logic_vector(inputs-1 downto 0)       --Output (falling edge detected)
+        );
+    END COMPONENT;
+
+
 begin
+
+    Inst_synchrnzr: synchrnzr PORT MAP(
+            clk => clk,
+            async_in => button_in,
+            sync_out => sync2edge
+    );
+    
+    Inst_edgedtctr: edgedtctr PORT MAP(
+        clk => clk,
+        sync_in => sync2edge,
+        edge => button_out
+    );
 
 
 end behavioral;

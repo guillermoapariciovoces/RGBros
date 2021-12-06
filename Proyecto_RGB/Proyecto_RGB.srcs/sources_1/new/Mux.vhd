@@ -2,14 +2,15 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_arith.ALL;
 
-package Mux_hot_pkg is
-        type std_logic_array is array(natural range <>) of std_logic_vector;
+package mux_pkg is
+        subtype vec_t is std_logic_vector(inputs-1 downto 0);
+        type arr_tt is array(width-1 downto 0) of vec_t;
 end package;
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_arith.ALL;
-use work.Mux_hot_pkg.all;
+use work.mux_pkg.all;
 
 entity Mux_hot is
     generic(
@@ -17,7 +18,7 @@ entity Mux_hot is
             width : positive := 8
     );
     port(
-        input : in std_logic_array(integer range inputs-1 downto 0)(width-1 downto 0);  --OJO, que puede no funcionar la el array
+        input : in arr_tt;  --OJO, que puede no funcionar la el array
         --input2 : in unsigned(width-1 downto 0);
         --input3 : in unsigned(width-1 downto 0);
         selector : in std_logic_vector (inputs-1 downto 0);
