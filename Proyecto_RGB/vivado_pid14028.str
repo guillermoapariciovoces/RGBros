@@ -1,0 +1,846 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 14028
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Dec 06 12:23:32 CET 2021
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	D:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	D:/Xilinx/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	rodri
+User home directory: C:/Users/rodri
+User working directory: D:/Documents/RGBros/Proyecto_RGB
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: D:/Xilinx/Vivado
+HDI_APPROOT: D:/Xilinx/Vivado/2021.1
+RDI_DATADIR: D:/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: D:/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/rodri/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/rodri/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/rodri/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	D:/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	D:/Documents/RGBros/Proyecto_RGB/vivado.log
+Vivado journal file: 	D:/Documents/RGBros/Proyecto_RGB/vivado.jou
+Engine tmp dir: 	D:/Documents/RGBros/Proyecto_RGB/.Xil/Vivado-14028-Sobremesa-de-Rodrigo
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: D:/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: D:/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: D:/Xilinx/Vivado/2021.1
+XILINX_VIVADO: D:/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: D:/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,149 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: D:\Documents\RGBros\Proyecto_RGB\Proyecto_RGB.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,149 MB. GUI used memory: 58 MB. Current time: 12/6/21, 12:23:33 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 74 MB (+74998kb) [00:00:33]
+// [Engine Memory]: 1,149 MB (+1052850kb) [00:00:33]
+// [GUI Memory]: 95 MB (+18100kb) [00:00:34]
+// [GUI Memory]: 115 MB (+16128kb) [00:00:35]
+// WARNING: HEventQueue.dispatchEvent() is taking  3886 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.1/data/ip'. 
+// Project name: Proyecto_RGB; location: D:/Documents/RGBros/Proyecto_RGB; part: xc7a100tcsg324-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 1116.824 ; gain = 0.000 
+dismissDialog("Open Project"); // bz
+// [GUI Memory]: 122 MB (+1481kb) [00:00:39]
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 138 MB (+10320kb) [00:03:03]
+// Elapsed time: 146 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 5); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 5); // D
+// [GUI Memory]: 152 MB (+7519kb) [00:03:08]
+// Elapsed time: 680 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 5); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 5); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 6); // D
+// Elapsed time: 81 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_counter : Counter(behavioral) (cntr.vhd)]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_counter : Counter(behavioral) (cntr.vhd)]", 8, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1214 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 6, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 6, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1172 ms.
+selectCodeEditor("OUTPUT_MODULE.vhd", 278, 162); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("OUTPUT_MODULE.vhd", 80, 214); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 114, 216); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 118, 212); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 230, 211); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 296, 213); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 161, 164); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 264, 331); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("OUTPUT_MODULE.vhd", 258, 111); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 228, 395); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("OUTPUT_MODULE.vhd", 85, 160); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 518, 166); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 161, 178); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 351, 180); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 289, 161); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 312, 147); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 306, 144); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 307, 158); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 354, 185); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 292, 229); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 336, 73); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 359, 69); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 364, 66); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 367, 37); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 440, 78); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 775, 70); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 84, 76); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 294, 231); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 401, 214); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 66 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 272, 214); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 353, 229); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 459, 245); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 644, 246); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 372, 267); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 404, 280); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 588, 262); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 587, 278); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 413, 301); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 637, 296); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 358, 315); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 364, 339); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("OUTPUT_MODULE.vhd", 340, 329); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 593, 265); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 580, 314); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 585, 281); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 577, 331); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 577, 331, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 638, 330); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 161 MB (+622kb) [00:20:23]
+// Elapsed time: 11 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 342, 179); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 362, 177); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 364, 176); // bP
+// Elapsed time: 29 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 6); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_counter : Counter(behavioral) (cntr.vhd)]", 8, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_counter : Counter(behavioral) (cntr.vhd)]", 8, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 38 seconds
+selectCodeEditor("cntr.vhd", 452, 74); // bP
+selectCodeEditor("cntr.vhd", 292, 85); // bP
+selectCodeEditor("cntr.vhd", 257, 76); // bP
+selectCodeEditor("cntr.vhd", 295, 89); // bP
+selectCodeEditor("cntr.vhd", 254, 78); // bP
+selectCodeEditor("cntr.vhd", 278, 106); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 22, 100); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 271, 93); // bP
+selectCodeEditor("cntr.vhd", 234, 91); // bP
+selectCodeEditor("cntr.vhd", 272, 88); // bP
+selectCodeEditor("cntr.vhd", 278, 80); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 57, 341); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_prescaler : Prescaler(behavioral) (Prescaler.vhd)]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_prescaler : Prescaler(behavioral) (Prescaler.vhd)]", 7, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1121 ms.
+// Elapsed time: 12 seconds
+selectCodeEditor("Prescaler.vhd", 309, 216); // bP
+selectCodeEditor("Prescaler.vhd", 280, 194); // bP
+// Elapsed time: 101 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_comparator_red : Comparator(dataflow) (Comparator.vhd)]", 9, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_comparator_red : Comparator(dataflow) (Comparator.vhd)]", 9, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1143 ms.
+selectCodeEditor("Comparator.vhd", 183, 160); // bP
+selectCodeEditor("Comparator.vhd", 119, 198); // bP
+typeControlKey((HResource) null, "Comparator.vhd", 'c'); // bP
+selectCodeEditor("Comparator.vhd", 125, 167); // bP
+typeControlKey((HResource) null, "Comparator.vhd", 'v'); // bP
+selectCodeEditor("Comparator.vhd", 217, 178); // bP
+selectCodeEditor("Comparator.vhd", 127, 180); // bP
+typeControlKey((HResource) null, "Comparator.vhd", 'v'); // bP
+selectCodeEditor("Comparator.vhd", 203, 194); // bP
+selectCodeEditor("Comparator.vhd", 362, 369); // bP
+selectCodeEditor("Comparator.vhd", 351, 383); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Comparator.vhd", 4); // m
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Comparator.vhd", 4); // m
+selectCodeEditor("Comparator.vhd", 127, 163); // bP
+typeControlKey((HResource) null, "Comparator.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 126, 281); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 126, 292); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("OUTPUT_MODULE.vhd", 111, 349); // bP
+// Elapsed time: 16 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 128, 140); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 145, 246); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 163, 261); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 152, 282); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("OUTPUT_MODULE.vhd", 386, 219); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 393, 216); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 395, 225); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 392, 299); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 391, 318); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 395, 332); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 334, 228); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 338, 245); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 336, 262); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 116, 279); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 245, 282); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 112, 277); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 114, 279); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 113, 383); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 116, 481); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 111, 486); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 390, 477); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 58 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 50, 123); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 193, 117); // bP
+// HMemoryUtils.trashcanNow. Engine heap size: 1,149 MB. GUI used memory: 93 MB. Current time: 12/6/21, 12:53:35 PM CET
+// Elapsed time: 86 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 59, 214); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 61, 231); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 62, 248); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 148, 246); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 125, 244); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 233, 145); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 412, 275); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 125, 313); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 119, 332); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 456, 313); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 457, 328); // bP
+// Elapsed time: 17 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 268, 326); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 741, 322); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 710, 331); // bP
+// Elapsed time: 11 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 5); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 5, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 5, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1131 ms.
+selectCodeEditor("INTERFACE_MODULE.vhd", 63, 216); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 66, 246); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 62, 264); // bP
+// Elapsed time: 33 seconds
+selectCodeEditor("INTERFACE_MODULE.vhd", 685, 259); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 718, 257); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 256, 327); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 62, 247); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectCodeEditor("INTERFACE_MODULE.vhd", 64, 215); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 65, 227); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 62, 245); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 84, 229); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 85, 245); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 390, 248); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("INTERFACE_MODULE.vhd", 64, 214); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'c'); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("INTERFACE_MODULE.vhd", 188, 90); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 317, 116); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 204, 108); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 107, 142); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 199, 130); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("INTERFACE_MODULE.vhd", 147, 277); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'c'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 148, 215); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 163, 230); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 156, 244); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 442, 323); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 444, 208); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectCodeEditor("INTERFACE_MODULE.vhd", 273, 174); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 450, 231); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectCodeEditor("INTERFACE_MODULE.vhd", 346, 194); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 222, 195); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 455, 176); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Prescaler.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 61, 209); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 79, 141); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 82, 141); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 59, 281); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectCodeEditor("INTERFACE_MODULE.vhd", 61, 210); // bP
+typeControlKey((HResource) null, "INTERFACE_MODULE.vhd", 'v'); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 453, 213); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 71, 214); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 439, 211); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 700, 264); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 689, 265); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 695, 271); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 464, 261); // bP
+// Elapsed time: 23 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 56 seconds
+selectCodeEditor("INTERFACE_MODULE.vhd", 464, 280); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 279, 281); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 371, 282); // bP
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(behavioral) (top.vhd)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(behavioral) (top.vhd)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(behavioral) (top.vhd)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1122 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(behavioral) (top.vhd)]", 4, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, top(behavioral) (top.vhd)]", 4, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("top.vhd", 86, 246); // bP
+selectCodeEditor("top.vhd", 88, 231); // bP
+selectCodeEditor("top.vhd", 93, 228); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("OUTPUT_MODULE.vhd", 451, 260); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 60, 262); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 57, 242); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+// Elapsed time: 13 seconds
+selectCodeEditor("INTERFACE_MODULE.vhd", 905, 262); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 638, 272); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 277, 278); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 397, 280); // bP
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 2); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-4-DDR-Master.xdc]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-4-DDR-Master.xdc]", 3, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1155 ms.
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectCodeEditor("INTERFACE_MODULE.vhd", 290, 299); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 490, 297); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 299, 297); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 290, 298); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 294, 298, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("INTERFACE_MODULE.vhd", 280, 276); // bP
+selectCodeEditor("INTERFACE_MODULE.vhd", 515, 285); // bP
+// Elapsed time: 29 seconds
+selectCodeEditor("INTERFACE_MODULE.vhd", 526, 305); // bP
+// Elapsed time: 27 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys-4-DDR-Master.xdc", 7); // m
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // D
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 12 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 539, 227); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 701, 366); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 686, 363); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 714, 360); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 714, 352); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 711, 327); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 725, 313); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 733, 292); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 727, 278); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 703, 262); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 692, 247); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Comparator.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // m
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 2); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 2); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 6); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 3); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_counter : Counter(behavioral) (cntr.vhd)]", 5, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_counter : Counter(behavioral) (cntr.vhd)]", 5, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("cntr.vhd", 223, 349); // bP
+selectCodeEditor("cntr.vhd", 554, 346); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("cntr.vhd", 141, 294); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 154, 265); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 132, 280); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectCodeEditor("cntr.vhd", 120, 109); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 272, 381); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("cntr.vhd", 620, 388); // bP
+selectCodeEditor("cntr.vhd", 382, 272); // bP
+selectCodeEditor("cntr.vhd", 386, 267); // bP
+selectCodeEditor("cntr.vhd", 153, 420); // bP
+selectCodeEditor("cntr.vhd", 277, 418); // bP
+selectCodeEditor("cntr.vhd", 251, 416); // bP
+selectCodeEditor("cntr.vhd", 202, 332); // bP
+selectCodeEditor("cntr.vhd", 253, 420); // bP
+selectCodeEditor("cntr.vhd", 282, 420); // bP
+selectCodeEditor("cntr.vhd", 379, 413); // bP
+selectCodeEditor("cntr.vhd", 155, 361); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 208, 434); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 346, 430); // bP
+selectCodeEditor("cntr.vhd", 253, 361); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 356, 435); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 392, 433); // bP
+selectCodeEditor("cntr.vhd", 490, 423); // bP
+selectCodeEditor("cntr.vhd", 486, 435); // bP
+selectCodeEditor("cntr.vhd", 343, 436); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 380, 433); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 519, 436); // bP
+selectCodeEditor("cntr.vhd", 202, 280); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 449, 436); // bP
+selectCodeEditor("cntr.vhd", 253, 367); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 349, 431); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 471, 434); // bP
+selectCodeEditor("cntr.vhd", 496, 412); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("cntr.vhd", 350, 433); // bP
+// Elapsed time: 25 seconds
+selectCodeEditor("cntr.vhd", 85, 158); // bP
+selectCodeEditor("cntr.vhd", 57, 246); // bP
+selectCodeEditor("cntr.vhd", 55, 258); // bP
+selectCodeEditor("cntr.vhd", 52, 279); // bP
+selectCodeEditor("cntr.vhd", 56, 293); // bP
+selectCodeEditor("cntr.vhd", 55, 311); // bP
+selectCodeEditor("cntr.vhd", 57, 328); // bP
+selectCodeEditor("cntr.vhd", 55, 348); // bP
+selectCodeEditor("cntr.vhd", 55, 366); // bP
+selectCodeEditor("cntr.vhd", 571, 364); // bP
+selectCodeEditor("cntr.vhd", 125, 291); // bP
+// Elapsed time: 49 seconds
+selectCodeEditor("cntr.vhd", 86, 455); // bP
+selectCodeEditor("cntr.vhd", 248, 444); // bP
+selectCodeEditor("cntr.vhd", 527, 449); // bP
+selectCodeEditor("cntr.vhd", 231, 131); // bP
+selectCodeEditor("cntr.vhd", 295, 94); // bP
+selectCodeEditor("cntr.vhd", 167, 129); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 146, 142); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 387, 115); // bP
+selectCodeEditor("cntr.vhd", 395, 115); // bP
+selectCodeEditor("cntr.vhd", 394, 89); // bP
+selectCodeEditor("cntr.vhd", 387, 78); // bP
+selectCodeEditor("cntr.vhd", 394, 78); // bP
+selectCodeEditor("cntr.vhd", 393, 62); // bP
+selectCodeEditor("cntr.vhd", 394, 44); // bP
+selectCodeEditor("cntr.vhd", 418, 91); // bP
+selectCodeEditor("cntr.vhd", 438, 109); // bP
+selectCodeEditor("cntr.vhd", 440, 123); // bP
+selectCodeEditor("cntr.vhd", 440, 140); // bP
+selectCodeEditor("cntr.vhd", 393, 161); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("cntr.vhd", 268, 247); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("cntr.vhd", 366, 380); // bP
+selectCodeEditor("cntr.vhd", 363, 386); // bP
+selectCodeEditor("cntr.vhd", 152, 385); // bP
+selectCodeEditor("cntr.vhd", 244, 380); // bP
+selectCodeEditor("cntr.vhd", 150, 380); // bP
+selectCodeEditor("cntr.vhd", 82, 314); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("cntr.vhd", 153, 191); // bP
+selectCodeEditor("cntr.vhd", 373, 199); // bP
+// Elapsed time: 22 seconds
+selectCodeEditor("cntr.vhd", 210, 209); // bP
+selectCodeEditor("cntr.vhd", 346, 213); // bP
+selectCodeEditor("cntr.vhd", 350, 212); // bP
+selectCodeEditor("cntr.vhd", 233, 217); // bP
+selectCodeEditor("cntr.vhd", 323, 211); // bP
+selectCodeEditor("cntr.vhd", 443, 212); // bP
+selectCodeEditor("cntr.vhd", 423, 215); // bP
+selectCodeEditor("cntr.vhd", 366, 234); // bP
+selectCodeEditor("cntr.vhd", 345, 212); // bP
+typeControlKey(null, null, 'z');
+selectCodeEditor("cntr.vhd", 233, 212); // bP
+selectCodeEditor("cntr.vhd", 420, 214); // bP
+selectCodeEditor("cntr.vhd", 382, 210); // bP
+selectCodeEditor("cntr.vhd", 419, 188); // bP
+selectCodeEditor("cntr.vhd", 154, 141); // bP
+selectCodeEditor("cntr.vhd", 364, 145); // bP
+selectCodeEditor("cntr.vhd", 208, 214); // bP
+selectCodeEditor("cntr.vhd", 360, 214); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 18 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 84, 162); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 83, 179); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 82, 195); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 778, 194); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 84, 147); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 323, 143); // bP
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Comparator.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 106, 248); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 118, 262); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 205, 260); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 211, 242); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 154, 107); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 195, 265); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 494, 251); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 229, 365); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 244, 367); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 231, 468); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 244, 469); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 231, 414); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 245, 415); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Comparator.vhd", 4); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cntr.vhd", 1); // m
+selectCodeEditor("cntr.vhd", 216, 328); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 552, 228); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'v'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 69, 127); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 73, 142); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 71, 159); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 73, 177); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 72, 190); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 70, 209); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 69, 226); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 257, 227); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 362, 231); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 603, 203); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 43 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 233, 367); // bP
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 114 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Comparator.vhd", 4); // m
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd), Inst_ciclo : Ciclo(behavioral) (Ciclo.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd), Inst_ciclo : Ciclo(behavioral) (Ciclo.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd), Inst_ciclo : Ciclo(behavioral) (Ciclo.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1117 ms.
+selectCodeEditor("Ciclo.vhd", 179, 395); // bP
+selectCodeEditor("Ciclo.vhd", 460, 404); // bP
+selectCodeEditor("Ciclo.vhd", 184, 399); // bP
+selectCodeEditor("Ciclo.vhd", 252, 400); // bP
+selectCodeEditor("Ciclo.vhd", 265, 397); // bP
+selectCodeEditor("Ciclo.vhd", 463, 400); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Prescaler.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 24 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 137, 312); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 223, 312); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Prescaler.vhd", 3); // m
+// Elapsed time: 26 seconds
+selectCodeEditor("Prescaler.vhd", 154, 470); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 15 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 76, 454); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 40, 317); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 41, 316); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 109, 312); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,149 MB. GUI used memory: 87 MB. Current time: 12/6/21, 1:23:35 PM CET
+// Elapsed time: 521 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top.vhd", 6); // m
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 135, 362); // bP
+typeControlKey((HResource) null, "OUTPUT_MODULE.vhd", 'c'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "INTERFACE_MODULE.vhd", 5); // m
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+selectCodeEditor("OUTPUT_MODULE.vhd", 240, 392); // bP
+// Elapsed time: 183 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 55, 280); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 212, 277); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 57, 259); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 195, 331); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 83, 165); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 147, 163); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 336, 164); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 69, 334); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 293, 340); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 271, 332); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 228, 158); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 230, 160); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 236, 160); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 225, 156); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 257, 160); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 579, 159); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 600, 173); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 822, 190); // bP
+// Elapsed time: 47 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 643, 151); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 645, 126); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 649, 96); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cntr.vhd", 1); // m
+selectCodeEditor("cntr.vhd", 623, 333); // bP
+selectCodeEditor("cntr.vhd", 68, 296); // bP
+selectCodeEditor("cntr.vhd", 101, 312); // bP
+selectCodeEditor("cntr.vhd", 159, 295); // bP
+selectCodeEditor("cntr.vhd", 596, 292); // bP
+selectCodeEditor("cntr.vhd", 154, 141); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+selectCodeEditor("cntr.vhd", 329, 208); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 301, 212); // bP
+selectCodeEditor("cntr.vhd", 118, 141); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'c'); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("cntr.vhd", 299, 211); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 390, 211); // bP
+typeControlKey((HResource) null, "cntr.vhd", 'v'); // bP
+selectCodeEditor("cntr.vhd", 506, 215); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("cntr.vhd", 230, 419); // bP
+selectCodeEditor("cntr.vhd", 427, 419); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("cntr.vhd", 443, 138); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 25 seconds
+selectCodeEditor("cntr.vhd", 778, 332); // bP
+// Elapsed time: 25 seconds
+selectCodeEditor("cntr.vhd", 546, 210); // bP
+selectCodeEditor("cntr.vhd", 52, 227); // bP
+selectCodeEditor("cntr.vhd", 203, 228); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "OUTPUT_MODULE.vhd", 2); // m
+// Elapsed time: 47 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd), Inst_counter : Counter(behavioral) (cntr.vhd)]", 5, false); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 3); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 3); // D
+// Elapsed time: 16 seconds
+selectCodeEditor("OUTPUT_MODULE.vhd", 148, 417); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 83, 213); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 171, 233); // bP
+selectCodeEditor("OUTPUT_MODULE.vhd", 130, 317); // bP
+// Elapsed time: 13 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, OUTPUT_MODULE(behavioral) (OUTPUT_MODULE.vhd)]", 3); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, INTERFACE_MODULE(behavioral) (INTERFACE_MODULE.vhd)]", 2); // D

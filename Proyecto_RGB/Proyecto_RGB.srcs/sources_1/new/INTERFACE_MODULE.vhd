@@ -8,14 +8,14 @@ entity INTERFACE_MODULE is
             width : positive := 8       --Tamaño de palabra de los valores
     );
     port(
-         clk : in std_logic;
-         reset_n : in std_logic;
-         red_value : in unsigned(width-1 downto 0);
-         green_value : in unsigned(width-1 downto 0);
-         blue_value : in unsigned(width-1 downto 0);
-         color_selected : in std_logic_vector(2 downto 0);      --Importante, en formato ONE HOT
-         anode : out std_logic_vector (3 downto 0);
-         segment : out std_logic_vector (6 downto 0)
+         clk : in std_logic;                                    --Clock
+         reset_n : in std_logic;                                --Reset (negado)
+         red_in : in std_logic_vector(width-1 downto 0);        --Entrada de componente rojo (byte)
+         green_in : in std_logic_vector(width-1 downto 0);      --Entrada de componente verde (byte)
+         blue_in : in std_logic_vector(width-1 downto 0);       --Entrada de componente azul (byte)
+         color_selected : in std_logic_vector(2 downto 0);      --Color seleccionado -> Importante, en formato ONE HOT (r,g,b)
+         anode : out std_logic_vector (7 downto 0);             --Selección de ánodo en la placa -> Importante NO NEGADO
+         segment : out std_logic_vector (6 downto 0)            --Control común de segmentos del display
     );
 end INTERFACE_MODULE;
 
@@ -119,9 +119,9 @@ begin
         );
      
      Inst_mux_1: Mux_hot PORT MAP(
-        input1 => red_value,
-        input2 => green_value,
-        input3 => blue_value,
+        input1 => red_in,
+        input2 => green_in,
+        input3 => blue_in,
         selector => color_selected,
         output => color_value
         );

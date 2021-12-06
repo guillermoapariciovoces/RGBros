@@ -6,59 +6,61 @@ use ieee.std_logic_arith.ALL;
 -- Módulo que gestiona la salida del RGB (procesado de los valores de la fsm a PWM
 
 entity OUTPUT_MODULE is
-    generic(width : positive := 8;          -- Tamaño de las variables
-            level_range : positive := 40    -- Nº de niveles RGB posible
+    generic(
+            width : positive := 8;                      -- Tamaño de las variables
+            level_range : positive := 50;               -- Nº de niveles RGB posible
+            prescaler_reduction : positive := 100000    -- Reducción de la temporización para los 7-segmentos
             );
-    port(clk : in std_logic;           --Clock
-         reset_n : in std_logic;
-         red_in : in unsigned(width-1 downto 0);
-         green_in : in unsigned(width-1 downto 0);
-         blue_in : in unsigned(width-1 downto 0);
-         red_out : out std_logic;
-         green_out: out std_logic;
-         blue_out: out std_logic
-         
+    port(
+         clk : in std_logic;                                    --Clock
+         reset_n : in std_logic;                                --Reset (negado)
+         red_in : in std_logic_vector(width-1 downto 0);        --Entrada de componente rojo (byte)
+         green_in : in std_logic_vector(width-1 downto 0);      --Entrada de componente verde (byte)
+         blue_in : in std_logic_vector(width-1 downto 0);       --Entrada de componente azul (byte)
+         red_out : out std_logic;                               --Salida de componente rojo (PWM)
+         green_out : out std_logic;                             --Salida de componente verde (PWM)
+         blue_out : out std_logic                               --Salida de componente azul (PWM)
     );
 end OUTPUT_MODULE;
 
 architecture behavioral of OUTPUT_MODULE is
 
-signal counter2comparator : unsigned(width-1  downto 0);
+signal counter2comparator : std_logic_vector(width-1  downto 0);
 signal prescaler_out : std_logic;
 
     COMPONENT Counter
     GENERIC(
-            width : positive := 8;
-            mod_count : positive := 50
+            width : positive := width;
+            mod_count : positive := level_range
             );
     PORT(
-        clk : in std_logic;                           --Clock
-        clr_n : in std_logic;                         --Clear (negado)
-        ce : in std_logic;                            --Chip Enable
-        up : in std_logic;                            --Count Up (o Down)
-        load_n : in std_logic;                        --Carga datos
-        data_in : out unsigned(width-1 downto 0);     --Valor a cargar
-        code : out unsigned(width-1 downto 0);        --Valor a sacar
-        ov : out std_logic                            --Indicador de Overflow
+        clk : in std_logic;                                   --Clock
+        clr_n : in std_logic;                                 --Clear (negado)
+        ce : in std_logic;                                    --Chip Enable
+        up : in std_logic;                                    --Count Up (o Down)
+        load_n : in std_logic;                                --Carga datos
+        data_in : out std_logic_vector(width-1 downto 0);     --Valor a cargar
+        code : out std_logic_vector(width-1 downto 0);        --Valor a sacar
+        ov : out std_logic
         );
     END COMPONENT;
     
     COMPONENT Comparator
     GENERIC(
-            width : positive := 8
+            width : positive := width
             );
     PORT(
-        in_a : in unsigned(width-1 downto 0);   --Entrada 1
-        in_b : in unsigned(width-1 downto 0);   --Entrada 2
-        aa : out std_logic;                     --Salida de A mayor
-        ab : out std_logic;                     --Salida de Igual
-        bb : out std_logic                      --Salida de B mayor
+        in_a : in std_logic_vector(width-1 downto 0);   --Entrada 1
+        in_b : in std_logic_vector(width-1 downto 0);   --Entrada 2
+        aa : out std_logic;                             --Salida de A mayor
+        ab : out std_logic;                             --Salida de Igual
+        bb : out std_logic                              --Salida de B mayor
         );
     END COMPONENT;
     
     COMPONENT Prescaler
     GENERIC(
-            reduction : positive := 100000
+            reduction : positive := prescaler_reduction
             );
     PORT(
         clk_in : in std_logic;

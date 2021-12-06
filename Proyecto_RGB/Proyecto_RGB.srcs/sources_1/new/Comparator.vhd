@@ -7,8 +7,8 @@ entity Comparator is
         width : positive := 8
      );
     port(
-        in_a : in unsigned(width-1 downto 0);   --Entrada 1
-        in_b : in unsigned(width-1 downto 0);   --Entrada 2
+        in_a : in std_logic_vector(width-1 downto 0);   --Entrada 1
+        in_b : in std_logic_vector(width-1 downto 0);   --Entrada 2
         aa : out std_logic;                     --Salida de A mayor
         ab : out std_logic;                     --Salida de Igual
         bb : out std_logic                      --Salida de B mayor
