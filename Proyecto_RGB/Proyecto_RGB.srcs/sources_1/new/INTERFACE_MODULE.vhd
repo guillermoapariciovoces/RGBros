@@ -1,7 +1,15 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.numeric_std;
 use ieee.std_logic_arith.ALL;
+
+package Mux_hot_pkg is
+        type std_logic_array is array(natural range <>) of std_logic_vector;
+end package;
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use ieee.std_logic_arith.ALL;
+use work.Mux_hot_pkg.all;
 
 entity INTERFACE_MODULE is
     generic(
@@ -13,34 +21,16 @@ entity INTERFACE_MODULE is
          red_in : in std_logic_vector(width-1 downto 0);        --Entrada de componente rojo (byte)
          green_in : in std_logic_vector(width-1 downto 0);      --Entrada de componente verde (byte)
          blue_in : in std_logic_vector(width-1 downto 0);       --Entrada de componente azul (byte)
-         color_selected : in std_logic_vector(2 downto 0);      --Color seleccionado -> Importante, en formato ONE HOT (r,g,b)
+         color_select : in std_logic_vector(0 to 2);            --Color seleccionado -> Importante, en formato ONE HOT (r,g,b)
+         -- r->(1 0 0), g->(0 1 0), b->(0 0 1)
          anode : out std_logic_vector (7 downto 0);             --Selección de ánodo en la placa -> Importante NO NEGADO
          segment : out std_logic_vector (6 downto 0)            --Control común de segmentos del display
     );
 end INTERFACE_MODULE;
 
+
 architecture behavioral of INTERFACE_MODULE is
-
-    --Señales de temporización:
-    signal prescaler_out : std_logic;
-    signal ciclo_selection : std_logic_vector(2 downto 0);
     
-    --Señales en formato nativo
-    signal color_value : unsigned (width-1 downto 0);
-        
-    --Señales en formato BCD:
-    signal BCD_output1 : std_logic_vector(3 downto 0);
-    signal BCD_output2 : std_logic_vector(3 downto 0);
-    signal BCD_output3 : std_logic_vector(3 downto 0);
-    
-    --Señales en formato 7-Segmentos
-    signal letter_output : unsigned(6 downto 0);
-    signal number_output1 : unsigned(6 downto 0);
-    signal number_output2 : unsigned(6 downto 0);
-    
-    signal final_output : unsigned(6 downto 0);
-
-
     COMPONENT Prescaler
     GENERIC(
             reduction : positive := 100000
@@ -55,7 +45,7 @@ architecture behavioral of INTERFACE_MODULE is
     
     COMPONENT Ciclo
     generic(
-            outputs : positive := 3
+            outputs : positive := 8
             );
     port(
         clk : in std_logic;
@@ -71,93 +61,139 @@ architecture behavioral of INTERFACE_MODULE is
             width : positive := 8
     );
     port(
-        input1 : in unsigned(width-1 downto 0);
-        input2 : in unsigned(width-1 downto 0);
-        input3 : in unsigned(width-1 downto 0);
-        selector : in  std_logic_vector (inputs-1 downto 0);
-        output: out unsigned(width-1 downto 0)
+        input : in std_logic_array(integer range inputs-1 downto 0)(width-1 downto 0);  --OJO, que puede no funcionar la el array
+        --input2 : in unsigned(width-1 downto 0);
+        --input3 : in unsigned(width-1 downto 0);
+        selector : in std_logic_vector (inputs-1 downto 0);
+        output: out std_logic_vector(width-1 downto 0)
     );
     END COMPONENT;
     
     
     COMPONENT BCD_Decoder
     PORT(
-        bin : in std_logic_vector (7 downto 0);
-        bcd1 : out std_logic_vector (3 downto 0);
-        bcd2 : out std_logic_vector (3 downto 0);
-        bcd3 : out std_logic_vector (3 downto 0)
+        code_bin_in : in std_logic_vector (7 downto 0);
+        code_bcd1_out : out std_logic_vector (3 downto 0);
+        code_bcd2_out : out std_logic_vector (3 downto 0);
+        code_bcd3_out : out std_logic_vector (3 downto 0)
     );
     END COMPONENT;
     
     COMPONENT Letter_Decoder
     PORT(
-        letter : in std_logic_vector(3 DOWNTO 0);   --Importante, en formato ONE HOT
-        code : out unsigned(6 DOWNTO 0)
+        letter_hot_in : in std_logic_vector(0 to 2);   --Importante, en formato ONE HOT
+        leter_7s_out : out std_logic_vector(6 DOWNTO 0)
     );
     END COMPONENT;
     
     
     COMPONENT Segment_Decoder
     PORT(
-        code_in : IN unsigned(3 DOWNTO 0);
-        segment_code : OUT unsigned(6 DOWNTO 0)
+        code_bcd_in : in std_logic_vector(3 DOWNTO 0);
+        code_7s_out : out std_logic_vector(6 DOWNTO 0)
     );
     END COMPONENT;
 
+   
+    --Formateado a array de la entrada para Mux_1
+    signal mux1_in : std_logic_array(2 downto 0);
+    
+    --Señales en formato nativo
+    signal color_value : std_logic_vector(width-1 downto 0);
+        
+    --Señales en formato BCD:
+    signal bcd_output1 : std_logic_vector(3 downto 0);
+    signal bcd_output2 : std_logic_vector(3 downto 0);
+    signal bcd_output3 : std_logic_vector(3 downto 0);
+    
+    --Señales en formato 7-Segmentos
+    signal letter_output : std_logic_vector(6 downto 0);
+    signal number_output1 : std_logic_vector(6 downto 0);
+    signal number_output2 : std_logic_vector(6 downto 0);
+    signal number_output3 : std_logic_vector(6 downto 0);
+    
+    --Formateado a array de la entrada para Mux_2
+    signal mux2_in : std_logic_array(7 downto 0);
+    
+    --Salida definitiva al display
+    signal final_output : std_logic_vector(6 downto 0);
+    
+    --Señales de temporización:
+    signal reduced_clk : std_logic;
+    signal ciclo_selection : std_logic_vector(7 downto 0);
+    
+
 begin
     
-    Inst_prescaler: Prescaler PORT MAP(
-        clk_in => clk,
-        reset_n => reset_n,
-        clk_out => prescaler_out
-        );
+    -- Mux de entrada desde FSM_MODULE
+    mux1_in(0) <= red_in;
+    mux1_in(1) <= green_in;
+    mux1_in(2) <= blue_in;
+     
+    Inst_mux_1: Mux_hot PORT MAP(
+       input => mux1_in,
+       selector => color_select,
+       output => color_value
+       );
+     
+    -- Decodificado de las señales a 7 segmentos
+    Inst_bcd_decoder: BCD_Decoder PORT MAP(
+       code_bin_in => color_value,
+       code_bcd1_out => BCD_output1,
+       code_bcd2_out => BCD_output2,
+       code_bcd3_out => BCD_output3
+       );
     
-     Inst_ciclo: Ciclo PORT MAP(
-        clk => clk,
-        reset_n => reset_n,
-        hots => ciclo_selection
-        );
+    Inst_segment_decoder_1: Segment_Decoder PORT MAP(
+       code_bcd_in => bcd_output1,
+       code_7s_out => number_output1
+       );
+        
+    Inst_segment_decoder_2: Segment_Decoder PORT MAP(
+       code_bcd_in => bcd_output2,
+       code_7s_out => number_output2
+       );
+        
+    Inst_segment_decoder_3: Segment_Decoder PORT MAP(
+       code_bcd_in => bcd_output2,
+       code_7s_out => number_output3
+       );
      
-     Inst_mux_1: Mux_hot PORT MAP(
-        input1 => red_in,
-        input2 => green_in,
-        input3 => blue_in,
-        selector => color_selected,
-        output => color_value
-        );
+    Inst_letter_decoder: Letter_Decoder PORT MAP(
+       letter_hot_in => color_select,
+       leter_7s_out => letter_output
+       );
+    
+    -- Mux de salida a los displays
+    mux2_in(0) <= letter_output;
+    mux2_in(1) <= "11111111";
+    mux2_in(2) <= "11111111";
+    mux2_in(3) <= "11111111";
+    mux2_in(4) <= "11111111";
+    mux2_in(5) <= number_output1;
+    mux2_in(6) <= number_output2;
+    mux2_in(7) <= number_output3;
         
-     Inst_bcd_decoder: BCD_Decoder PORT MAP(
-        bin => std_logic_vector(color_value),
-        bcd1 => BCD_output1,
-        bcd2 => BCD_output1,
-        bcd3 => BCD_output1
-        );
+    Inst_mux_2: Mux_hot PORT MAP(
+       input => mux2_in,
+       selector => ciclo_selection,
+       output => final_output
+       );
      
-     Inst_letter_decoder: Letter_Decoder PORT MAP(
-        letter => color_selected,
-        code => letter_output
-        );
+    -- Selección dinámica en one-hot para el display
+    Inst_prescaler: Prescaler PORT MAP(
+       clk_in => clk,
+       reset_n => reset_n,
+       clk_out => reduced_clk
+       );
+    
+    Inst_ciclo: Ciclo PORT MAP(
+       clk => reduced_clk,
+       reset_n => reset_n,
+       hots => ciclo_selection
+       );
         
-     Inst_segment_decoder_1: Segment_Decoder PORT MAP(
-        code_in => unsigned(BCD_output1),
-        segment_code => number_output1
-        );
-        
-     Inst_segment_decoder_2: Segment_Decoder PORT MAP(
-        code_in => unsigned(BCD_output2),
-        segment_code => number_output2
-        );
-        
-     Inst_mux_2: Mux_hot PORT MAP(
-        input1 => letter_output,
-        input2 => number_output1,
-        input3 => number_output2,
-        selector => ciclo_selection,
-        output => final_output
-        );
-        
-        
-        segment <= std_logic_vector(final_output);
-        anode <= ciclo_selection;
+    segment <= final_output;
+    anode <= ciclo_selection;
 
 end behavioral;

@@ -5,17 +5,17 @@ USE ieee.std_logic_unsigned.ALL;
 
 entity Letter_Decoder is
     port(
-        letter : in std_logic_vector(3 DOWNTO 0);   --Importante, en formato ONE HOT
-        code : out unsigned(6 DOWNTO 0)
+        letter_hot_in : in std_logic_vector(0 to 2);   --Importante, en formato ONE HOT
+        leter_7s_out : out std_logic_vector(6 DOWNTO 0)
         );
 end Letter_Decoder;
 
 
 architecture Dataflow of Letter_Decoder is
 begin
-    WITH letter SELECT
-        code <= "0000101" WHEN "000",
-                "1111011" WHEN "000",
-                "0011111" WHEN "001",
-                "1111111" WHEN others;
+    WITH letter_hot_in SELECT
+        leter_7s_out <= "1111010" WHEN "100",
+                "0000100" WHEN "010",
+                "1100000" WHEN "001",
+                "0000000" WHEN others;
 end architecture dataflow;

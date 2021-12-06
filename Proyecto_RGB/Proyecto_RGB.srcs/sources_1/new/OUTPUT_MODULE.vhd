@@ -28,6 +28,7 @@ architecture behavioral of OUTPUT_MODULE is
 signal counter2comparator : std_logic_vector(width-1  downto 0);
 signal prescaler_out : std_logic;
 
+
     COMPONENT Counter
     GENERIC(
             width : positive := width;
