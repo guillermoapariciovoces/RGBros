@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Dec  6 19:56:09 2021
-# Process ID: 8924
+# Start of session at: Sat Dec 11 09:44:15 2021
+# Process ID: 6080
 # Current directory: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
 # Log file: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1/top.vds

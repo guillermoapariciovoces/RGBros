@@ -9,7 +9,7 @@ entity OUTPUT_MODULE is
     generic(
             width : positive := 8;                      -- Tamaño de las variables
             level_range : positive := 50;               -- Nº de niveles RGB posible
-            prescaler_reduction : positive := 100000    -- Reducción de la temporización para los 7-segmentos
+            prescaler_reduction : positive := 400000    -- Reducción de la temporización para los 7-segmentos
             );
     port(
          clk : in std_logic;                                    --Clock
@@ -40,7 +40,7 @@ signal prescaler_out : std_logic;
         ce : in std_logic;                                    --Chip Enable
         up : in std_logic;                                    --Count Up (o Down)
         load_n : in std_logic;                                --Carga datos
-        data_in : out std_logic_vector(width-1 downto 0);     --Valor a cargar
+        data_in : in std_logic_vector(width-1 downto 0);     --Valor a cargar
         code : out std_logic_vector(width-1 downto 0);        --Valor a sacar
         ov : out std_logic
         );
@@ -84,6 +84,7 @@ begin
         ce => '1',
         up => '1',
         load_n => '1',
+        data_in => "00000000",
         code => counter2comparator
         );
         

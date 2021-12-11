@@ -95,6 +95,8 @@ read_vhdl -library xil_defaultlib {
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd
+  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd
+  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd
@@ -103,7 +105,6 @@ read_vhdl -library xil_defaultlib {
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd
   D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd
 }
-read_vhdl -vhdl2008 -library xil_defaultlib D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux.vhd
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

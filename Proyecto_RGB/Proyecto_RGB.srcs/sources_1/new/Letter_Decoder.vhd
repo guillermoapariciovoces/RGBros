@@ -5,7 +5,7 @@ USE ieee.std_logic_unsigned.ALL;
 
 entity Letter_Decoder is
     port(
-        letter_hot_in : in std_logic_vector(0 to 2);   --Importante, en formato ONE HOT
+        letter_hot_in : in std_logic_vector(2 downto 0);   --Importante, en formato ONE HOT
         leter_7s_out : out std_logic_vector(6 DOWNTO 0)
         );
 end Letter_Decoder;

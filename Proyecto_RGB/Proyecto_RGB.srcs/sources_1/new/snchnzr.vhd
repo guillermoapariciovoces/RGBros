@@ -1,31 +1,22 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-use ieee.std_logic_arith.ALL;
 
-entity synchrnzr is
-    generic(
-            inputs : positive := 4;     --Nº de pulsadores empleados
-            reg_size : positive := 2    --Tamaño del registro de desplazamiento
-    );
-    port( 
-        clk : in std_logic;        --Clock
-        async_in : in std_logic_vector(inputs-1 downto 0);   --Input (asynchronous)
-        sync_out : out std_logic_vector(inputs-1 downto 0)   --Outnput (synchronous)
-    );
-end synchrnzr;
+entity SYNCHRNZR is
+ port ( 
+ CLK : in std_logic;        --Clock
+ ASYNC_IN : in std_logic;   --Input (asynchronous)
+ SYNC_OUT : out std_logic   --Outnput (synchronous)
+ );
+end SYNCHRNZR;
 
-architecture behavioral of synchrnzr is
-    subtype vec_t is std_logic_vector(reg_size-1 downto 0);
-    type arr_tt is array(inputs-1 downto 0) of vec_t;
-    signal sreg : arr_tt := (others => X"0"); --Vector flip-flops
+architecture BEHAVIORAL of SYNCHRNZR is
+ signal sreg : std_logic_vector(1 downto 0) := "00";    --Vector flip-flops
 begin
-    process(clk)
+    process (CLK)
     begin
-        if rising_edge(clk) then 
-            for i in 0 to inputs-1 loop
-                sync_out(i) <= sreg(i)(reg_size-1);                     --Segundo flip-flop
-                sreg(i) <= sreg(i)(reg_size-2 downto 0) & async_in(i);  --Primer flip-flop
-            end loop;
+        if rising_edge(CLK) then 
+            sync_out <= sreg(1);            --Segundo flip-flop
+            sreg <= sreg(0) & async_in;     --Primer flip-flop
         end if; 
     end process;
-end behavioral;
+end BEHAVIORAL;

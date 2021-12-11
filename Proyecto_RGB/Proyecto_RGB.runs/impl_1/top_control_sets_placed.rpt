@@ -1,0 +1,85 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sat Dec 11 09:45:40 2021
+| Host         : Sobremesa-de-Rodrigo running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     7 |
+|    Minimum number of control sets                        |     7 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    21 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     7 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     2 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              31 |           13 |
+| No           | No                    | Yes                    |              38 |           10 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               6 |            4 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------------+-----------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|                      Clock Signal                     |           Enable Signal           |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------------+-----------------------------------+----------------------------------------------+------------------+----------------+--------------+
+|  Inst_fsm_module/Inst_FSM_Slave/ce__0                 |                                   |                                              |                1 |              1 |         1.00 |
+|  Inst_fsm_module/Inst_FSM_Master/START                |                                   |                                              |                1 |              1 |         1.00 |
+|  Inst_fsm_module/Inst_FSM_Master/blue                 |                                   |                                              |                2 |              5 |         2.50 |
+|  clk_IBUF_BUFG                                        | Inst_fsm_module/Inst_FSM_Slave/ce | Inst_interface_module/Inst_prescaler/reset_n |                4 |              6 |         1.50 |
+|  Inst_interface_module/Inst_prescaler/clk_out_i_reg_0 |                                   |                                              |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                        |                                   |                                              |                7 |             20 |         2.86 |
+|  clk_IBUF_BUFG                                        |                                   | Inst_interface_module/Inst_prescaler/reset_n |               10 |             38 |         3.80 |
++-------------------------------------------------------+-----------------------------------+----------------------------------------------+------------------+----------------+--------------+
+
+

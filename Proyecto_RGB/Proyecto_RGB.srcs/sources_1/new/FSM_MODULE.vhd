@@ -36,7 +36,7 @@ port (
         ROJO        : out std_logic_vector(width-1 downto 0); --Salida valor de Rojo (R)
         VERDE       : out std_logic_vector(width-1 downto 0); --Salida valor de Verde (G)
         AZUL        : out std_logic_vector(width-1 downto 0); --Salida valor de Azul (B)
-        Color_Select: out std_logic_vector(0 to 2)--Color actual en seleccion (R, G, B)
+        Color_Select: out std_logic_vector(2 downto 0)--Color actual en seleccion (R, G, B)
         
     );
 end FSM_MODULE;
@@ -64,7 +64,7 @@ port (
         ROJO        : out std_logic_vector(width-1 downto 0); --Salida valor de Rojo (R)
         VERDE       : out std_logic_vector(width-1 downto 0); --Salida valor de Verde (G)
         AZUL        : out std_logic_vector(width-1 downto 0); --Salida valor de Azul (B)
-        Color_Select: out std_logic_vector(0 to 2); --Color seleccionado 
+        Color_Select: out std_logic_vector(2 downto 0); --Color seleccionado 
 -- r->(1 0 0), g->(0 1 0), b->(0 0 1) -> Importante, en formato ONE HOT (r,g,b)
        --Comunicacion con la maquina esclava
         DONE        : in std_logic;

@@ -5,7 +5,7 @@ use ieee.std_logic_arith.ALL;
 
 entity Prescaler is
     generic(
-            reduction : positive := 100000
+            reduction : positive := 400000
             );
     port(
         clk_in : in std_logic;
