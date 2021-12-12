@@ -38,7 +38,7 @@ generic(
 end FSM_Slave;
 
 architecture Behavioral of FSM_Slave is
-type STATES is (S0, WORKING, FINISHED);
+type STATES is (S0, LOAD, WORKING, FINISHED);
     signal current_state: STATES := S0;
     signal next_state: STATES;
     
@@ -81,15 +81,21 @@ state_register: process (reset_n, CLK)
 nextstate_decod: process (current_state, START)
     begin            --Decodificador del siguiente estado a cargar en la máquina de estados
     
-    
     next_state <= current_state;
     case current_state is
       when S0 =>
       DONE <= '0';
+      ce <= '0';
          if START = '1' then 
-            next_state <= WORKING;
+            next_state <= LOAD;
          end if;
-      when WORKING => 
+
+      when LOAD => 
+        DONE <= '0';
+        ce <= '1';
+        next_state <= WORKING;
+
+      when WORKING =>
         DONE <= '0';
         ce <= '1';
         next_state <= FINISHED;
@@ -105,3 +111,4 @@ nextstate_decod: process (current_state, START)
 end case;
 end process;
 end Behavioral;
+
