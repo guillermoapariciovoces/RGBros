@@ -1,20 +1,21 @@
 #-----------------------------------------------------------
-# Vivado v2021.2 (64-bit)
-# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
-# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Dec 12 00:53:40 2021
-# Process ID: 12724
-# Current directory: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6784 C:\Users\migue\OneDrive\Documentos\GitHub\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
-# Log file: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/vivado.log
-# Journal file: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB\vivado.jou
-# Running On: PcMikael, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34046 MB
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Dec 13 06:13:56 2021
+# Process ID: 13504
+# Current directory: D:/Documents/RGBros/Proyecto_RGB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent452 D:\Documents\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
+# Log file: D:/Documents/RGBros/Proyecto_RGB/vivado.log
+# Journal file: D:/Documents/RGBros/Proyecto_RGB\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.xpr
+open_project D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.xpr
 update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/Master_Slave_tb.vhd w ]
-add_files -fileset sim_1 C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/Master_Slave_tb.vhd
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1

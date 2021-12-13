@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sat Dec 11 09:46:02 2021
+| Date         : Mon Dec 13 06:15:59 2021
 | Host         : Sobremesa-de-Rodrigo running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 27
+             Violations found: 26
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 8          |
 | TIMING-18 | Warning          | Missing input or output delay | 12         |
-| TIMING-20 | Warning          | Non-clocked latch             | 7          |
+| TIMING-20 | Warning          | Non-clocked latch             | 6          |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -162,11 +162,6 @@ Related violations: <none>
 TIMING-20#6 Warning
 Non-clocked latch  
 The latch Inst_fsm_module/Inst_FSM_Master/blue_reg[5] cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Master/blue_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Slave/ce_reg cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Slave/ce_reg/G is not reached by a timing clock
 Related violations: <none>
 
 

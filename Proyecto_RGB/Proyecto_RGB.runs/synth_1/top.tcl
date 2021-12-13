@@ -80,7 +80,6 @@ set_property webtalk.parent_dir D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.ca
 set_property parent.project_path D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 set_property ip_output_repo d:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
@@ -114,8 +113,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Documents/RGBros/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files D:/Documents/RGBros/Nexys-4-DDR-Master.xdc]
+read_xdc D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

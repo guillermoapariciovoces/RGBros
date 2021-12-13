@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sat Dec 11 09:46:02 2021
+| Date         : Mon Dec 13 06:15:59 2021
 | Host         : Sobremesa-de-Rodrigo running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 3
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 3          |
+| PDRC-153 | Warning  | Gated clock check                                   | 2          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -55,11 +55,6 @@ Related violations: <none>
 PDRC-153#2 Warning
 Gated clock check  
 Net Inst_fsm_module/Inst_FSM_Master/blue is a gated clock net sourced by a combinational pin Inst_fsm_module/Inst_FSM_Master/blue_reg[5]_i_1/O, cell Inst_fsm_module/Inst_FSM_Master/blue_reg[5]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#3 Warning
-Gated clock check  
-Net Inst_fsm_module/Inst_FSM_Slave/ce__0 is a gated clock net sourced by a combinational pin Inst_fsm_module/Inst_FSM_Slave/ce_reg_i_1/O, cell Inst_fsm_module/Inst_FSM_Slave/ce_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 
