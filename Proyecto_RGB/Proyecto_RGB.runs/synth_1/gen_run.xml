@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639372462">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639501086">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -35,26 +35,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/FSM_MODULE.vhd">
+    <File Path="$PSRCDIR/sources_1/new/FSM_MASTER_2_0.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_MODULE.vhd"/>
-        <Attr Name="ImportTime" Val="1639212158"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/FSM_Master.vhd">
+    <File Path="$PSRCDIR/sources_1/new/FSM_MODULE_2_0.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Master.vhd"/>
-        <Attr Name="ImportTime" Val="1639212102"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/FSM_Slave.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Slave.vhd"/>
-        <Attr Name="ImportTime" Val="1639372155"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -151,6 +139,33 @@
       <FileInfo>
         <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/top.vhd"/>
         <Attr Name="ImportTime" Val="1639212182"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_MODULE.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_MODULE.vhd"/>
+        <Attr Name="ImportTime" Val="1639212158"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_Master.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Master.vhd"/>
+        <Attr Name="ImportTime" Val="1639212102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_Slave.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Slave.vhd"/>
+        <Attr Name="ImportTime" Val="1639372155"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

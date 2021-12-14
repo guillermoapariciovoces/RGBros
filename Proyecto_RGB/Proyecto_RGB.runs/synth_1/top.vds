@@ -2,14 +2,15 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Dec 13 06:14:24 2021
-# Process ID: 5824
-# Current directory: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1
+# Start of session at: Tue Dec 14 17:58:10 2021
+# Process ID: 6040
+# Current directory: C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1/top.vds
-# Journal file: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1\vivado.jou
+# Log file: C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1/top.vds
+# Journal file: C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1121.625 ; gain = 0.000
 Command: synth_design -top top -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
@@ -17,183 +18,163 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12596
+INFO: [Synth 8-7075] Helper process launched with PID 8252
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1135.219 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1121.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:19]
-INFO: [Synth 8-3491] module 'INPUT_MODULE' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:4' bound to instance 'Inst_input_module' of component 'INPUT_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:98]
-INFO: [Synth 8-638] synthesizing module 'INPUT_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:16]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:19]
+INFO: [Synth 8-3491] module 'INPUT_MODULE' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:4' bound to instance 'Inst_input_module' of component 'INPUT_MODULE' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'INPUT_MODULE' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:16]
 	Parameter inputs bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_1' of component 'synchrnzr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:40]
-INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:12]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_2' of component 'synchrnzr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:46]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_3' of component 'synchrnzr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:52]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_4' of component 'synchrnzr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:58]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_1' of component 'edgedtctr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:64]
-INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:12]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_2' of component 'edgedtctr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:70]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_3' of component 'edgedtctr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:76]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_4' of component 'edgedtctr' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:82]
-INFO: [Synth 8-256] done synthesizing module 'INPUT_MODULE' (3#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:16]
-INFO: [Synth 8-3491] module 'FSM_MODULE' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE.vhd:26' bound to instance 'Inst_fsm_module' of component 'FSM_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'FSM_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE.vhd:45]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_1' of component 'synchrnzr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:12]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_2' of component 'synchrnzr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:46]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_3' of component 'synchrnzr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:52]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd:4' bound to instance 'Inst_synchrnzr_4' of component 'synchrnzr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:58]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_1' of component 'edgedtctr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:64]
+INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:12]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_2' of component 'edgedtctr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:70]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_3' of component 'edgedtctr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd:4' bound to instance 'Inst_edgedtctr_4' of component 'edgedtctr' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'INPUT_MODULE' (3#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd:16]
+INFO: [Synth 8-3491] module 'FSM_MODULE_2_0' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd:31' bound to instance 'Inst_fsm_module' of component 'FSM_MODULE_2_0' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'FSM_MODULE_2_0' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd:49]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'FSM_Master' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:25' bound to instance 'Inst_FSM_Master' of component 'FSM_Master' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE.vhd:96]
-INFO: [Synth 8-638] synthesizing module 'FSM_Master' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:50]
-	Parameter width bound to: 8 - type: integer 
-WARNING: [Synth 8-614] signal 'red' is read in the process but is not in the sensitivity list [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:68]
-WARNING: [Synth 8-614] signal 'REGIST_IN' is read in the process but is not in the sensitivity list [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:68]
-WARNING: [Synth 8-614] signal 'green' is read in the process but is not in the sensitivity list [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:68]
-WARNING: [Synth 8-614] signal 'blue' is read in the process but is not in the sensitivity list [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'FSM_Master' (4#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:50]
-INFO: [Synth 8-3491] module 'FSM_Slave' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Slave.vhd:25' bound to instance 'Inst_FSM_Slave' of component 'FSM_Slave' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE.vhd:112]
-INFO: [Synth 8-638] synthesizing module 'FSM_Slave' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Slave.vhd:40]
-	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'Counter' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:9' bound to instance 'Inst_counter' of component 'Counter' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Slave.vhd:64]
-INFO: [Synth 8-638] synthesizing module 'Counter' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:26]
+INFO: [Synth 8-3491] module 'Counter' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:9' bound to instance 'Inst_counter_RED' of component 'Counter' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'Counter' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:26]
 	Parameter width bound to: 8 - type: integer 
 	Parameter mod_count bound to: 50 - type: integer 
-WARNING: [Synth 8-614] signal 'clr_n' is read in the process but is not in the sensitivity list [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:29]
-INFO: [Synth 8-256] done synthesizing module 'Counter' (5#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:26]
-INFO: [Synth 8-226] default block is never used [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Slave.vhd:85]
-INFO: [Synth 8-256] done synthesizing module 'FSM_Slave' (6#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Slave.vhd:40]
-INFO: [Synth 8-256] done synthesizing module 'FSM_MODULE' (7#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE.vhd:45]
-INFO: [Synth 8-3491] module 'OUTPUT_MODULE' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:8' bound to instance 'Inst_output_module' of component 'OUTPUT_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:114]
-INFO: [Synth 8-638] synthesizing module 'OUTPUT_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:26]
+WARNING: [Synth 8-614] signal 'clr_n' is read in the process but is not in the sensitivity list [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'Counter' (4#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:26]
+INFO: [Synth 8-3491] module 'Counter' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:9' bound to instance 'Inst_counter_GREEN' of component 'Counter' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd:100]
+INFO: [Synth 8-3491] module 'Counter' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:9' bound to instance 'Inst_counter_BLUE' of component 'Counter' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd:109]
+INFO: [Synth 8-3491] module 'FSM_MASTER_2_0' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MASTER_2_0.vhd:31' bound to instance 'Inst_FSM_Master' of component 'FSM_MASTER_2_0' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'FSM_MASTER_2_0' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MASTER_2_0.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'FSM_MASTER_2_0' (5#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MASTER_2_0.vhd:50]
+INFO: [Synth 8-256] done synthesizing module 'FSM_MODULE_2_0' (6#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd:49]
+INFO: [Synth 8-3491] module 'OUTPUT_MODULE' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:8' bound to instance 'Inst_output_module' of component 'OUTPUT_MODULE' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:114]
+INFO: [Synth 8-638] synthesizing module 'OUTPUT_MODULE' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:26]
 	Parameter width bound to: 8 - type: integer 
 	Parameter level_range bound to: 50 - type: integer 
 	Parameter prescaler_reduction bound to: 100000 - type: integer 
-INFO: [Synth 8-3491] module 'Prescaler' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:6' bound to instance 'Inst_prescaler' of component 'Prescaler' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:75]
-INFO: [Synth 8-638] synthesizing module 'Prescaler' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
+INFO: [Synth 8-3491] module 'Prescaler' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:6' bound to instance 'Inst_prescaler' of component 'Prescaler' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'Prescaler' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
 	Parameter reduction bound to: 100000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Prescaler' (8#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
-INFO: [Synth 8-3491] module 'Counter' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:9' bound to instance 'Inst_counter' of component 'Counter' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:81]
-INFO: [Synth 8-3491] module 'Comparator' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:5' bound to instance 'Inst_comparator_red' of component 'Comparator' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:91]
-INFO: [Synth 8-638] synthesizing module 'Comparator' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'Prescaler' (7#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
+INFO: [Synth 8-3491] module 'Counter' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd:9' bound to instance 'Inst_counter' of component 'Counter' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:81]
+INFO: [Synth 8-3491] module 'Comparator' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:5' bound to instance 'Inst_comparator_red' of component 'Comparator' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'Comparator' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:18]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Comparator' (9#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:18]
-INFO: [Synth 8-3491] module 'Comparator' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:5' bound to instance 'Inst_comparator_green' of component 'Comparator' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:97]
-INFO: [Synth 8-3491] module 'Comparator' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:5' bound to instance 'Inst_comparator_blue' of component 'Comparator' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:103]
-INFO: [Synth 8-256] done synthesizing module 'OUTPUT_MODULE' (10#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:26]
-INFO: [Synth 8-3491] module 'INTERFACE_MODULE' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:5' bound to instance 'Inst_interface_module' of component 'INTERFACE_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:125]
-INFO: [Synth 8-638] synthesizing module 'INTERFACE_MODULE' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'Comparator' (8#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:18]
+INFO: [Synth 8-3491] module 'Comparator' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:5' bound to instance 'Inst_comparator_green' of component 'Comparator' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:97]
+INFO: [Synth 8-3491] module 'Comparator' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd:5' bound to instance 'Inst_comparator_blue' of component 'Comparator' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:103]
+INFO: [Synth 8-256] done synthesizing module 'OUTPUT_MODULE' (9#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd:26]
+INFO: [Synth 8-3491] module 'INTERFACE_MODULE' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:5' bound to instance 'Inst_interface_module' of component 'INTERFACE_MODULE' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'INTERFACE_MODULE' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:23]
 	Parameter width bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'Mux_3x8' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:7' bound to instance 'Inst_mux_1' of component 'Mux_3x8' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:139]
-INFO: [Synth 8-638] synthesizing module 'Mux_3x8' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:22]
+INFO: [Synth 8-3491] module 'Mux_3x8' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:7' bound to instance 'Inst_mux_1' of component 'Mux_3x8' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'Mux_3x8' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:22]
 	Parameter inputs bound to: 3 - type: integer 
 	Parameter width bound to: 8 - type: integer 
-WARNING: [Synth 8-153] case item 3'b1xx will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:26]
-WARNING: [Synth 8-153] case item 3'b01x will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'Mux_3x8' (11#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:22]
-INFO: [Synth 8-3491] module 'BCD_Decoder' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd:8' bound to instance 'Inst_bcd_decoder' of component 'BCD_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:147]
-INFO: [Synth 8-638] synthesizing module 'BCD_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd:18]
-INFO: [Synth 8-256] done synthesizing module 'BCD_Decoder' (12#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd:18]
-INFO: [Synth 8-3491] module 'Segment_Decoder' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:6' bound to instance 'Inst_segment_decoder_1' of component 'Segment_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:154]
-INFO: [Synth 8-638] synthesizing module 'Segment_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'Segment_Decoder' (13#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:13]
-INFO: [Synth 8-3491] module 'Segment_Decoder' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:6' bound to instance 'Inst_segment_decoder_2' of component 'Segment_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:159]
-INFO: [Synth 8-3491] module 'Segment_Decoder' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:6' bound to instance 'Inst_segment_decoder_3' of component 'Segment_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:164]
-INFO: [Synth 8-3491] module 'Letter_Decoder' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd:6' bound to instance 'Inst_letter_decoder' of component 'Letter_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:169]
-INFO: [Synth 8-638] synthesizing module 'Letter_Decoder' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'Letter_Decoder' (14#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd:14]
-INFO: [Synth 8-3491] module 'Mux_8x7' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:7' bound to instance 'Inst_mux_2' of component 'Mux_8x7' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:174]
-INFO: [Synth 8-638] synthesizing module 'Mux_8x7' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:27]
+WARNING: [Synth 8-153] case item 3'b1xx will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:26]
+WARNING: [Synth 8-153] case item 3'b01x will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'Mux_3x8' (10#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd:22]
+INFO: [Synth 8-3491] module 'BCD_Decoder' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd:8' bound to instance 'Inst_bcd_decoder' of component 'BCD_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'BCD_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd:18]
+INFO: [Synth 8-256] done synthesizing module 'BCD_Decoder' (11#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd:18]
+INFO: [Synth 8-3491] module 'Segment_Decoder' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:6' bound to instance 'Inst_segment_decoder_1' of component 'Segment_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'Segment_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'Segment_Decoder' (12#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:13]
+INFO: [Synth 8-3491] module 'Segment_Decoder' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:6' bound to instance 'Inst_segment_decoder_2' of component 'Segment_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:159]
+INFO: [Synth 8-3491] module 'Segment_Decoder' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd:6' bound to instance 'Inst_segment_decoder_3' of component 'Segment_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:164]
+INFO: [Synth 8-3491] module 'Letter_Decoder' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd:6' bound to instance 'Inst_letter_decoder' of component 'Letter_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:169]
+INFO: [Synth 8-638] synthesizing module 'Letter_Decoder' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'Letter_Decoder' (13#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd:14]
+INFO: [Synth 8-3491] module 'Mux_8x7' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:7' bound to instance 'Inst_mux_2' of component 'Mux_8x7' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'Mux_8x7' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:27]
 	Parameter inputs bound to: 8 - type: integer 
 	Parameter width bound to: 7 - type: integer 
-WARNING: [Synth 8-153] case item 8'b1xxxxxxx will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
-WARNING: [Synth 8-153] case item 8'b01xxxxxx will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
-WARNING: [Synth 8-153] case item 8'b001xxxxx will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
-WARNING: [Synth 8-153] case item 8'b0001xxxx will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
-WARNING: [Synth 8-153] case item 8'b00001xxx will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
-WARNING: [Synth 8-153] case item 8'b000001xx will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
-WARNING: [Synth 8-153] case item 8'b0000001x will never be executed [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
-INFO: [Synth 8-256] done synthesizing module 'Mux_8x7' (15#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:27]
-INFO: [Synth 8-3491] module 'Prescaler' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:6' bound to instance 'Inst_prescaler' of component 'Prescaler' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:187]
-INFO: [Synth 8-638] synthesizing module 'Prescaler__parameterized1' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
+WARNING: [Synth 8-153] case item 8'b1xxxxxxx will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
+WARNING: [Synth 8-153] case item 8'b01xxxxxx will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
+WARNING: [Synth 8-153] case item 8'b001xxxxx will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
+WARNING: [Synth 8-153] case item 8'b0001xxxx will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
+WARNING: [Synth 8-153] case item 8'b00001xxx will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
+WARNING: [Synth 8-153] case item 8'b000001xx will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
+WARNING: [Synth 8-153] case item 8'b0000001x will never be executed [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'Mux_8x7' (14#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd:27]
+INFO: [Synth 8-3491] module 'Prescaler' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:6' bound to instance 'Inst_prescaler' of component 'Prescaler' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:187]
+INFO: [Synth 8-638] synthesizing module 'Prescaler__parameterized1' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
 	Parameter reduction bound to: 400000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Prescaler__parameterized1' (15#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
-INFO: [Synth 8-3491] module 'Ciclo' declared at 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd:5' bound to instance 'Inst_ciclo' of component 'Ciclo' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:193]
-INFO: [Synth 8-638] synthesizing module 'Ciclo' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Prescaler__parameterized1' (14#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd:18]
+INFO: [Synth 8-3491] module 'Ciclo' declared at 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd:5' bound to instance 'Inst_ciclo' of component 'Ciclo' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:193]
+INFO: [Synth 8-638] synthesizing module 'Ciclo' [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd:16]
 	Parameter outputs bound to: 8 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'Ciclo' (16#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'INTERFACE_MODULE' (17#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:23]
-INFO: [Synth 8-256] done synthesizing module 'top' (18#1) [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'Ciclo' (15#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'INTERFACE_MODULE' (16#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd:23]
+INFO: [Synth 8-256] done synthesizing module 'top' (17#1) [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd:19]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1135.219 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 1121.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1135.219 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1121.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1135.219 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:12 . Memory (MB): peak = 1121.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1135.219 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1121.625 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]
-Finished Parsing XDC File [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1150.277 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1141.238 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1150.277 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 1141.238 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'FSM_Master'
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'FSM_Slave'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'FSM_MASTER_2_0'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                      sr |                              000 |                              000
-                sr_slave |                              001 |                              011
-                      sg |                              010 |                              001
-                sg_slave |                              011 |                              100
-                      sb |                              100 |                              010
-                sb_slave |                              101 |                              101
+                      sr |                             0000 |                             0000
+          sr_counter_mas |                             0001 |                             0011
+        sr_counter_menos |                             0010 |                             0100
+                      sg |                             0011 |                             0001
+          sg_counter_mas |                             0100 |                             0101
+        sg_counter_menos |                             0101 |                             0110
+                      sb |                             0110 |                             0010
+          sb_counter_mas |                             0111 |                             0111
+        sb_counter_menos |                             1000 |                             1000
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'FSM_Master'
-WARNING: [Synth 8-327] inferring latch for variable 'red_reg' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:90]
-WARNING: [Synth 8-327] inferring latch for variable 'green_reg' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:113]
-WARNING: [Synth 8-327] inferring latch for variable 'blue_reg' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:137]
-WARNING: [Synth 8-327] inferring latch for variable 'REGIST_OUT_reg' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:90]
-WARNING: [Synth 8-327] inferring latch for variable 'CHANGE_reg' [D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd:89]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                      s0 |                             0001 |                               00
-                    load |                             0010 |                               01
-                 working |                             0100 |                               10
-                finished |                             1000 |                               11
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'FSM_Slave'
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'FSM_MASTER_2_0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'Inst_interface_module/Inst_segment_decoder_2' (Segment_Decoder) to 'Inst_interface_module/Inst_segment_decoder_3'
 ---------------------------------------------------------------------------------
@@ -202,29 +183,28 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   31 Bit       Adders := 2     
-	   2 Input    8 Bit       Adders := 4     
+	   2 Input    8 Bit       Adders := 8     
 	   2 Input    4 Bit       Adders := 9     
 	   2 Input    3 Bit       Adders := 1     
 +---Registers : 
 	               31 Bit    Registers := 2     
-	                8 Bit    Registers := 3     
+	                8 Bit    Registers := 5     
 	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 4     
 	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input   31 Bit        Muxes := 2     
 	   2 Input   11 Bit        Muxes := 2     
-	   6 Input    8 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 5     
 	   4 Input    7 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 5     
-	   6 Input    3 Bit        Muxes := 2     
-	   2 Input    3 Bit        Muxes := 6     
-	   2 Input    1 Bit        Muxes := 8     
-	   6 Input    1 Bit        Muxes := 5     
-	   4 Input    1 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 4     
+	   9 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 14    
+	   9 Input    3 Bit        Muxes := 1     
+	   9 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 11    
+	   9 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -241,25 +221,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:27 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1150.277 ; gain = 15.059
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:35 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -277,37 +257,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -341,45 +321,42 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    18|
+|2     |CARRY4 |     8|
 |3     |LUT1   |    10|
-|4     |LUT2   |     8|
-|5     |LUT3   |    17|
-|6     |LUT4   |    48|
-|7     |LUT5   |    12|
-|8     |LUT6   |    36|
-|9     |MUXF7  |     5|
-|10    |SRL16E |     4|
-|11    |FDCE   |    43|
-|12    |FDPE   |     2|
-|13    |FDRE   |    24|
-|14    |LD     |     6|
-|15    |IBUF   |     6|
-|16    |OBUF   |    15|
-|17    |OBUFT  |     6|
+|4     |LUT2   |     1|
+|5     |LUT3   |     3|
+|6     |LUT4   |    38|
+|7     |LUT5   |     4|
+|8     |LUT6   |    11|
+|9     |SRL16E |     4|
+|10    |FDCE   |    35|
+|11    |FDPE   |     1|
+|12    |FDRE   |    24|
+|13    |IBUF   |     6|
+|14    |OBUF   |    15|
+|15    |OBUFT  |     6|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 1150.406 ; gain = 0.129
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1150.406 ; gain = 15.188
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:33 . Memory (MB): peak = 1141.238 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:39 . Memory (MB): peak = 1141.238 ; gain = 19.613
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1160.309 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1150.137 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1176.156 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.789 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 6 instances were transformed.
-  LD => LDCE: 6 instances
+No Unisim elements were transformed.
 
-Synth Design complete, checksum: a50ba055
+Synth Design complete, checksum: 8c959ec1
 INFO: [Common 17-83] Releasing license: Synthesis
-88 Infos, 19 Warnings, 0 Critical Warnings and 0 Errors encountered.
+84 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:34 . Memory (MB): peak = 1176.156 ; gain = 40.938
-INFO: [Common 17-1381] The checkpoint 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:56 . Memory (MB): peak = 1157.789 ; gain = 36.164
+INFO: [Common 17-1381] The checkpoint 'C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 13 06:15:02 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 14 17:59:19 2021...

@@ -31,7 +31,7 @@ architecture behavioral of top is
             );
     END COMPONENT;
     
-    COMPONENT FSM_MODULE
+    COMPONENT FSM_MODULE_2_0
         generic(
                 width : positive := 8
                 );
@@ -101,7 +101,7 @@ begin
         button_out => button2fsm
     );
 
-    Inst_fsm_module: FSM_MODULE PORT MAP(
+    Inst_fsm_module: FSM_MODULE_2_0 PORT MAP(
         reset_n => reset_n,
         clk => clk,
         button => button2fsm,
