@@ -45,6 +45,7 @@ port (
         GREEN    : out std_logic_vector(1 downto 0);
         BLUE     : out std_logic_vector(1 downto 0)
         );
+        
 end FSM_MASTER_2_0;
 
 architecture Behavioral of FSM_MASTER_2_0 is
@@ -71,16 +72,16 @@ nextstate_decod: process (BUTTON, current_state)
         case current_state is
         when SR =>
         Color_Select <= "100";
-            if BUTTON(0) = '1' then 
+            if BUTTON(3) = '1' then 
                     next_state <= SG;
                 end if;
-            if BUTTON(1) = '1' then 
+            if BUTTON(2) = '1' then 
                     next_state <= SB;
                 end if;   
-            if (BUTTON(2) = '1') then  
+            if (BUTTON(1) = '1') then  
                     next_state <= SR_COUNTER_MENOS;
                 end if;
-            if (BUTTON(3) = '1') then  
+            if (BUTTON(0) = '1') then  
                     next_state <= SR_COUNTER_MAS;
                 end if;
                 
@@ -96,16 +97,16 @@ nextstate_decod: process (BUTTON, current_state)
 
         when SG =>
         Color_Select <= "010";        
-            if BUTTON(0) = '1' then 
+            if BUTTON(3) = '1' then 
                     next_state <= SB;
                 end if;
-            if BUTTON(1) = '1' then 
+            if BUTTON(2) = '1' then 
                     next_state <= SR;
                 end if;   
-            if (BUTTON(2) = '1') then  
+            if (BUTTON(1) = '1') then  
                     next_state <= SG_COUNTER_MENOS;
                 end if;
-            if (BUTTON(3) = '1') then  
+            if (BUTTON(0) = '1') then  
                     next_state <= SG_COUNTER_MAS;
                 end if;
 
@@ -120,16 +121,16 @@ nextstate_decod: process (BUTTON, current_state)
              
         when SB =>
            Color_Select <= "001";      
-            if BUTTON(0) = '1' then 
+            if BUTTON(3) = '1' then 
                     next_state <= SR;
                 end if;
-            if BUTTON(1) = '1' then 
+            if BUTTON(2) = '1' then 
                     next_state <= SG;
                 end if;   
-            if (BUTTON(2) = '1') then  
+            if (BUTTON(1) = '1') then  
                     next_state <= SB_COUNTER_MENOS;
                 end if;
-            if (BUTTON(3) = '1') then  
+            if (BUTTON(0) = '1') then  
                     next_state <= SB_COUNTER_MAS;
                 end if;
 

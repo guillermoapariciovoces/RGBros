@@ -2,22 +2,63 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Dec 14 14:09:43 2021
-# Process ID: 11764
-# Current directory: C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7892 C:\Users\guill\Documents\GitHub\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
-# Log file: C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/vivado.log
-# Journal file: C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB\vivado.jou
+# Start of session at: Wed Dec 15 11:28:32 2021
+# Process ID: 2004
+# Current directory: D:/SED/Proyecto_RGB
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent836 D:\SED\Proyecto_RGB\Proyecto_RGB.xpr
+# Log file: D:/SED/Proyecto_RGB/vivado.log
+# Journal file: D:/SED/Proyecto_RGB\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.xpr
+open_project D:/SED/Proyecto_RGB/Proyecto_RGB.xpr
 update_compile_order -fileset sources_1
-close [ open C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd w ]
-add_files C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd
-close [ open C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MASTER_2_0.vhd w ]
-add_files C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MASTER_2_0.vhd
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/SED/Proyecto_RGB/Proyecto_RGB.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/SED/Proyecto_RGB/Proyecto_RGB.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
 reset_run synth_1
-launch_runs synth_1 -jobs 4
+launch_runs synth_1 -jobs 2
 wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/SED/Proyecto_RGB/Proyecto_RGB.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw_manager
+close_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/SED/Proyecto_RGB/Proyecto_RGB.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/SED/Proyecto_RGB/Proyecto_RGB.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

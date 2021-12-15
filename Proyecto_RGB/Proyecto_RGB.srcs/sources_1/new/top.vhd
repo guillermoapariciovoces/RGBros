@@ -10,7 +10,7 @@ entity top is
             button : in std_logic_vector(3 downto 0);   --Botones de selección
             -- Orden: arriba, abajo, izda, dcha
             rgb: out std_logic_vector(2 downto 0);      --LED RGB
-            led : out std_logic_vector(2 downto 0);     --LEDs auxiliares de nivel
+            led : out std_logic_vector(5 downto 0);     --LEDs auxiliares de nivel
             digctrl : out std_logic_vector(7 downto 0); --Selector de display 7s
             segment : out std_logic_vector(6 downto 0)  --Display 7s (segmentos comunes)
     );
@@ -133,4 +133,5 @@ begin
       segment => segment
     );
     
+    led(5 downto 3) <= color_info;
 end behavioral;

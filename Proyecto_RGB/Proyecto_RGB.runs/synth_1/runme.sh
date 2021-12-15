@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/guill/Documents/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1'
+HD_PWD='D:/SED/Proyecto_RGB/Proyecto_RGB.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
