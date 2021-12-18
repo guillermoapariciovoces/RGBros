@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Dec 12 00:53:40 2021
-# Process ID: 12724
+# Start of session at: Sat Dec 18 20:32:20 2021
+# Process ID: 16940
 # Current directory: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6784 C:\Users\migue\OneDrive\Documentos\GitHub\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2664 C:\Users\migue\OneDrive\Documentos\GitHub\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
 # Log file: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/vivado.log
 # Journal file: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB\vivado.jou
 # Running On: PcMikael, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34046 MB
@@ -14,7 +14,35 @@ start_gui
 open_project C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.xpr
 update_compile_order -fileset sources_1
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/Master_Slave_tb.vhd w ]
-add_files -fileset sim_1 C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/Master_Slave_tb.vhd
+close [ open C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/cntr_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/cntr_tb.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
 update_compile_order -fileset sim_1
 update_compile_order -fileset sim_1
+launch_simulation
+source top.tcl
+set_property top cntr_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+close_sim
+launch_simulation
+launch_simulation
+source cntr_tb.tcl
+close_sim
+launch_simulation
+source cntr_tb.tcl
+close_sim
+launch_simulation
+source cntr_tb.tcl
+close_sim
+launch_simulation
+source cntr_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {100ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source cntr_tb.tcl
+close_sim
