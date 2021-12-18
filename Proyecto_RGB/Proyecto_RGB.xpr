@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2021.2 (64-bit)              -->
+<!-- Product Version: Vivado v2021.1 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="56" Path="C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.xpr">
+<Project Version="7" Minor="55" Path="D:/SED/Proyecto_RGB/Proyecto_RGB.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="1d741be2fb55473e9ddddec9c9c814c8"/>
+    <Option Name="Id" Val="47c03dd3077941c1ae404f89db7f4a44"/>
     <Option Name="Part" Val="xc7a100tcsg324-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
     <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
     <Option Name="CompiledLibDirXcelium" Val="$PCACHEDIR/compile_simlib/xcelium"/>
     <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="SimulatorInstallDirModelSim" Val=""/>
     <Option Name="SimulatorInstallDirQuesta" Val=""/>
+    <Option Name="SimulatorInstallDirIES" Val=""/>
     <Option Name="SimulatorInstallDirXcelium" Val=""/>
     <Option Name="SimulatorInstallDirVCS" Val=""/>
     <Option Name="SimulatorInstallDirRiviera" Val=""/>
     <Option Name="SimulatorInstallDirActiveHdl" Val=""/>
     <Option Name="SimulatorGccInstallDirModelSim" Val=""/>
     <Option Name="SimulatorGccInstallDirQuesta" Val=""/>
+    <Option Name="SimulatorGccInstallDirIES" Val=""/>
     <Option Name="SimulatorGccInstallDirXcelium" Val=""/>
     <Option Name="SimulatorGccInstallDirVCS" Val=""/>
     <Option Name="SimulatorGccInstallDirRiviera" Val=""/>
@@ -31,6 +34,7 @@
     <Option Name="SimulatorVersionXsim" Val="2021.1"/>
     <Option Name="SimulatorVersionModelSim" Val="2020.4"/>
     <Option Name="SimulatorVersionQuesta" Val="2020.4"/>
+    <Option Name="SimulatorVersionIES" Val="15.20.083"/>
     <Option Name="SimulatorVersionXcelium" Val="20.09.006"/>
     <Option Name="SimulatorVersionVCS" Val="R-2020.12"/>
     <Option Name="SimulatorVersionRiviera" Val="2020.10"/>
@@ -38,6 +42,7 @@
     <Option Name="SimulatorGccVersionXsim" Val="6.2.0"/>
     <Option Name="SimulatorGccVersionModelSim" Val="5.3.0"/>
     <Option Name="SimulatorGccVersionQuesta" Val="5.3.0"/>
+    <Option Name="SimulatorGccVersionIES" Val="6.2.0"/>
     <Option Name="SimulatorGccVersionXcelium" Val="6.3"/>
     <Option Name="SimulatorGccVersionVCS" Val="6.2.0"/>
     <Option Name="SimulatorGccVersionRiviera" Val="6.2.0"/>
@@ -89,35 +94,35 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/new/BCD_Decoder.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/BCD_Decoder.vhd"/>
+          <Attr Name="ImportTime" Val="1638814441"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Ciclo.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Ciclo.vhd"/>
+          <Attr Name="ImportTime" Val="1638814505"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Comparator.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Comparator.vhd"/>
+          <Attr Name="ImportTime" Val="1638791294"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/FSM_MODULE.vhd">
+      <File Path="$PSRCDIR/sources_1/new/FSM_MASTER_2_0.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/FSM_Master.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/FSM_Slave.vhd">
+      <File Path="$PSRCDIR/sources_1/new/FSM_MODULE_2_0.vhd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -125,72 +130,123 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/INPUT_MODULE.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/INPUT_MODULE.vhd"/>
+          <Attr Name="ImportTime" Val="1639134499"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/INTERFACE_MODULE.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/INTERFACE_MODULE.vhd"/>
+          <Attr Name="ImportTime" Val="1639212211"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Letter_Decoder.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Letter_Decoder.vhd"/>
+          <Attr Name="ImportTime" Val="1639212240"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Mux_3x8.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux_3x8.vhd"/>
+          <Attr Name="ImportTime" Val="1639210661"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Mux_8x7.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux_8x7.vhd"/>
+          <Attr Name="ImportTime" Val="1639210644"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/OUTPUT_MODULE.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/OUTPUT_MODULE.vhd"/>
+          <Attr Name="ImportTime" Val="1639211829"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/Prescaler.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Prescaler.vhd"/>
+          <Attr Name="ImportTime" Val="1639211904"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/cntr.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/cntr.vhd"/>
+          <Attr Name="ImportTime" Val="1638794201"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/decoder.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/decoder.vhd"/>
+          <Attr Name="ImportTime" Val="1638797767"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/edgedtctr.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/edgedtctr.vhd"/>
+          <Attr Name="ImportTime" Val="1639119848"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/snchnzr.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/snchnzr.vhd"/>
+          <Attr Name="ImportTime" Val="1639119829"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/new/top.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/top.vhd"/>
+          <Attr Name="ImportTime" Val="1639212182"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/FSM_MODULE.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_MODULE.vhd"/>
+          <Attr Name="ImportTime" Val="1639212158"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/FSM_Master.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Master.vhd"/>
+          <Attr Name="ImportTime" Val="1639212102"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/FSM_Slave.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Slave.vhd"/>
+          <Attr Name="ImportTime" Val="1639372155"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -198,6 +254,8 @@
       <File Path="$PSRCDIR/sources_1/new/Mux.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux.vhd"/>
+          <Attr Name="ImportTime" Val="1639210355"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -205,6 +263,8 @@
       <File Path="$PSRCDIR/sources_1/new/Segment_Decoder.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Segment_Decoder.vhd"/>
+          <Attr Name="ImportTime" Val="1638630632"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -217,8 +277,10 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PPRDIR/../Nexys-4-DDR-Master.xdc">
+      <File Path="$PSRCDIR/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../Nexys-4-DDR-Master.xdc"/>
+          <Attr Name="ImportTime" Val="1638119512"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
@@ -231,6 +293,8 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sim_1/new/cntr_tb.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/Master_Slave_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1639372155"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -238,6 +302,8 @@
       <File Path="$PSRCDIR/sim_1/new/top_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/top_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1638116166"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -290,7 +356,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -302,7 +368,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021">
           <Desc>Default settings for Implementation.</Desc>

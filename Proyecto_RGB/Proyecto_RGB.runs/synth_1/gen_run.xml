@@ -1,44 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639212252">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639565127">
   <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="RDS-RDS" Name="top.vds"/>
   <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/BCD_Decoder.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/BCD_Decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1638814441"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Ciclo.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Ciclo.vhd"/>
+        <Attr Name="ImportTime" Val="1638814505"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Comparator.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Comparator.vhd"/>
+        <Attr Name="ImportTime" Val="1638791294"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/FSM_MODULE.vhd">
+    <File Path="$PSRCDIR/sources_1/new/FSM_MASTER_2_0.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/FSM_Master.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/FSM_Slave.vhd">
+    <File Path="$PSRCDIR/sources_1/new/FSM_MODULE_2_0.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -46,72 +49,123 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/INPUT_MODULE.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/INPUT_MODULE.vhd"/>
+        <Attr Name="ImportTime" Val="1639134499"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/INTERFACE_MODULE.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/INTERFACE_MODULE.vhd"/>
+        <Attr Name="ImportTime" Val="1639212211"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Letter_Decoder.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Letter_Decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1639212240"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Mux_3x8.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux_3x8.vhd"/>
+        <Attr Name="ImportTime" Val="1639210661"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Mux_8x7.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux_8x7.vhd"/>
+        <Attr Name="ImportTime" Val="1639210644"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/OUTPUT_MODULE.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/OUTPUT_MODULE.vhd"/>
+        <Attr Name="ImportTime" Val="1639211829"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/Prescaler.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Prescaler.vhd"/>
+        <Attr Name="ImportTime" Val="1639211904"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/cntr.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/cntr.vhd"/>
+        <Attr Name="ImportTime" Val="1638794201"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/decoder.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1638797767"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/edgedtctr.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/edgedtctr.vhd"/>
+        <Attr Name="ImportTime" Val="1639119848"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/snchnzr.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/snchnzr.vhd"/>
+        <Attr Name="ImportTime" Val="1639119829"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/top.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/top.vhd"/>
+        <Attr Name="ImportTime" Val="1639212182"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_MODULE.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_MODULE.vhd"/>
+        <Attr Name="ImportTime" Val="1639212158"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_Master.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Master.vhd"/>
+        <Attr Name="ImportTime" Val="1639212102"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM_Slave.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Slave.vhd"/>
+        <Attr Name="ImportTime" Val="1639372155"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -119,6 +173,8 @@
     <File Path="$PSRCDIR/sources_1/new/Mux.vhd">
       <FileInfo SFType="VHDL2008">
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux.vhd"/>
+        <Attr Name="ImportTime" Val="1639210355"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -126,6 +182,8 @@
     <File Path="$PSRCDIR/sources_1/new/Segment_Decoder.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Segment_Decoder.vhd"/>
+        <Attr Name="ImportTime" Val="1638630632"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -138,8 +196,10 @@
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
-    <File Path="$PPRDIR/../Nexys-4-DDR-Master.xdc">
+    <File Path="$PSRCDIR/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../Nexys-4-DDR-Master.xdc"/>
+        <Attr Name="ImportTime" Val="1638119512"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>

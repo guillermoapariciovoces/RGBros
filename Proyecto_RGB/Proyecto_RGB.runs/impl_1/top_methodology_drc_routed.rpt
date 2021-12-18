@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sat Dec 11 09:46:02 2021
-| Host         : Sobremesa-de-Rodrigo running 64-bit major release  (build 9200)
+| Date         : Wed Dec 15 11:49:48 2021
+| Host         : DESKTOP-9L1N67Q running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -23,13 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 27
+             Violations found: 26
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
 | TIMING-17 | Critical Warning | Non-clocked sequential cell   | 8          |
-| TIMING-18 | Warning          | Missing input or output delay | 12         |
-| TIMING-20 | Warning          | Non-clocked latch             | 7          |
+| TIMING-18 | Warning          | Missing input or output delay | 18         |
 +-----------+------------------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -101,72 +100,67 @@ Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An output delay is missing on segment[0] relative to clock(s) sys_clk_pin
+An output delay is missing on led[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An output delay is missing on segment[1] relative to clock(s) sys_clk_pin
+An output delay is missing on led[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An output delay is missing on segment[2] relative to clock(s) sys_clk_pin
+An output delay is missing on led[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An output delay is missing on segment[3] relative to clock(s) sys_clk_pin
+An output delay is missing on led[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An output delay is missing on segment[4] relative to clock(s) sys_clk_pin
+An output delay is missing on led[4] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An output delay is missing on segment[5] relative to clock(s) sys_clk_pin
+An output delay is missing on led[5] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
+An output delay is missing on segment[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on segment[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on segment[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on segment[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#16 Warning
+Missing input or output delay  
+An output delay is missing on segment[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#17 Warning
+Missing input or output delay  
+An output delay is missing on segment[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#18 Warning
+Missing input or output delay  
 An output delay is missing on segment[6] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Master/CHANGE_reg[1] cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Master/CHANGE_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Master/blue_reg[1] cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Master/blue_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Master/blue_reg[2] cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Master/blue_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Master/blue_reg[3] cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Master/blue_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#5 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Master/blue_reg[4] cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Master/blue_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Master/blue_reg[5] cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Master/blue_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch Inst_fsm_module/Inst_FSM_Slave/ce_reg cannot be properly analyzed as its control pin Inst_fsm_module/Inst_FSM_Slave/ce_reg/G is not reached by a timing clock
 Related violations: <none>
 
 

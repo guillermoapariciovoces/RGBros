@@ -105,7 +105,7 @@ architecture behavioral of INTERFACE_MODULE is
     
     COMPONENT Prescaler
     GENERIC(
-            reduction : positive := 400000
+            reduction : positive := 4000000
             );
     PORT(
         clk_in : in std_logic;

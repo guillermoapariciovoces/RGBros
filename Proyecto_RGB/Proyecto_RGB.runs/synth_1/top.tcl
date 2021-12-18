@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/synth_1/top.tcl"
+  variable script "D:/SED/Proyecto_RGB/Proyecto_RGB.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,40 +70,43 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param checkpoint.writeSynthRtdsInDcp 1
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.cache/wt [current_project]
-set_property parent.project_path D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.xpr [current_project]
+set_property webtalk.parent_dir D:/SED/Proyecto_RGB/Proyecto_RGB.cache/wt [current_project]
+set_property parent.project_path D:/SED/Proyecto_RGB/Proyecto_RGB.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo d:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.cache/ip [current_project]
+set_property ip_output_repo d:/SED/Proyecto_RGB/Proyecto_RGB.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Slave.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd
-  D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MASTER_2_0.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd
+  D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -114,8 +117,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Documents/RGBros/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files D:/Documents/RGBros/Nexys-4-DDR-Master.xdc]
+read_xdc D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files D:/SED/Proyecto_RGB/Proyecto_RGB.srcs/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
