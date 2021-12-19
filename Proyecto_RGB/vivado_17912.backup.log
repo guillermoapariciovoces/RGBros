@@ -2,15 +2,16 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Sun Dec 12 00:53:40 2021
-# Process ID: 12724
+# Start of session at: Sat Dec 18 22:39:31 2021
+# Process ID: 17912
 # Current directory: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6784 C:\Users\migue\OneDrive\Documentos\GitHub\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6236 C:\Users\migue\OneDrive\Documentos\GitHub\RGBros\Proyecto_RGB\Proyecto_RGB.xpr
 # Log file: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/vivado.log
 # Journal file: C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB\vivado.jou
 # Running On: PcMikael, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34046 MB
 #-----------------------------------------------------------
 start_gui
+open_project C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.xpr
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
@@ -61,21 +62,11 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 avai
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
-open_project C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.xpr
-INFO: [Project 1-313] Project file moved from 'D:/Documents/RGBros/Proyecto_RGB' since last save.
-INFO: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.gen/sources_1', nor could it be found using path 'D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.gen/sources_1'.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
-CRITICAL WARNING: [Board 49-67] The board_part definition was not found for digilentinc.com:nexys4_ddr:part0:1.1. This can happen sometimes when you use custom board part. You can resolve this issue by setting 'board.repoPaths' parameter, pointing to the location of custom board files. Valid board_part values can be retrieved with the 'get_board_parts' Tcl command.
-INFO: [Project 1-230] Project 'Proyecto_RGB.xpr' upgraded for this version of Vivado.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 1644.156 ; gain = 0.000
 update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/Master_Slave_tb.vhd w ]
-add_files -fileset sim_1 C:/Users/migue/OneDrive/Documentos/GitHub/RGBros/Proyecto_RGB/Proyecto_RGB.srcs/sim_1/new/Master_Slave_tb.vhd
-update_compile_order -fileset sim_1
-update_compile_order -fileset sim_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 12 05:25:40 2021...
