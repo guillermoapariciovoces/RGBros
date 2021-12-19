@@ -40,6 +40,7 @@ port (
   
   -- Clock period definitions
   constant clk_period: time := 10 ns;
+  constant DELAY: time := 0.1 * CLK_PERIOD;
 
 begin
   -- Instantiate the Unit Under Test (UUT)
@@ -63,18 +64,29 @@ begin
     wait for 0.5 * clk_period;
   end process;
 
-  reset_n <= '1' after 0.25 * clk_period, '0' after 0.75 * clk_period;
+  --reset_n <= '1' after 0.25 * clk_period, '0' after 0.75 * clk_period;
 
   -- Stimulus process
   stim_proc: process
   begin
-  --Comprobación de Color_Select
+  
+  reset_n <= '0', '1' after DELAY;
+  wait until reset_n = '1';
+  --Comprobación de Color_Select/STATES
     button(3) <= '1';
-    wait for 2.25 * clk_period;
+    wait for clk_period;
+    button(3) <= '0';
     assert color_select = "010"
       report "[FAILED]: el valor de Color_Select no es correcto"
       severity failure;
-
+    
+    button(0) <= '1';
+    wait for clk_period;
+    button(0) <= '0';
+    assert VERDE = "010"
+      report "[FAILED]: el valor de Color_Select no es correcto"
+      severity failure;
+      
     button(3) <= '1';
     wait for 2 * clk_period;
     assert color_select = "001"
@@ -87,11 +99,6 @@ begin
       report "[FAILED]: el valor de Color_Select no es correcto"
       severity failure;
       
---    pushbutton <= '1';
---    wait for 2 * clk_period;
-
---    pushbutton <= '0';
---    wait for 2 * clk_period;
 
     assert false
       report "[SUCCESS]: simulation finished."

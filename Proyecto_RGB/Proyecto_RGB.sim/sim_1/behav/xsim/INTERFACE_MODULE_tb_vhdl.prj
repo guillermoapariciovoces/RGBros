@@ -1,0 +1,14 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd" \
+"../../../../Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd" \
+"../../../../Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd" \
+"../../../../Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd" \
+"../../../../Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd" \
+"../../../../Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd" \
+"../../../../Proyecto_RGB.srcs/sources_1/new/cntr.vhd" \
+"../../../../Proyecto_RGB.srcs/sources_1/new/decoder.vhd" \
+"../../../../Proyecto_RGB.srcs/sim_1/new/INTERFACE_MODULE_tb.vhd" \
+
+# Do not sort compile order
+nosort

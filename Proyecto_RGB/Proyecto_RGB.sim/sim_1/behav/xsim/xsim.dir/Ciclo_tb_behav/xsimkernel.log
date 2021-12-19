@@ -1,0 +1,7 @@
+Running: xsim.dir/Ciclo_tb_behav/xsimk.exe -simmode gui -wdb Ciclo_tb_behav.wdb -simrunnum 0 -socket 50712
+Design successfully loaded
+Design Loading Memory Usage: 7188 KB (Peak: 7188 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 7556 KB (Peak: 7556 KB)
+Simulation CPU Usage: 46 ms

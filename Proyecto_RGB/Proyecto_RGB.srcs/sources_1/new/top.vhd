@@ -134,4 +134,11 @@ begin
     );
     
     led(5 downto 3) <= color_info;
+    
+    rgb(0) <=  red2output;
+    rgb(1) <=  green2output;
+    rgb(2) <=  blue2output;
+    led(2) <=  red2output;
+    led(1) <=  green2output;
+    led(0) <=  blue2output;
 end behavioral;

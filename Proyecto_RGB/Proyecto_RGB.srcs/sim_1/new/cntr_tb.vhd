@@ -8,7 +8,7 @@ end cntr_tb;
 architecture behavior of cntr_tb is 
 
   -- Component Declaration for the Unit Under Test (UUT)
-  component cntr
+  component Counter
     generic (
       width : positive := 8;
       mod_count : positive := 50
@@ -31,7 +31,7 @@ architecture behavior of cntr_tb is
   signal up      : std_logic;
   signal ce      : std_logic;
   signal load_n  : std_logic;
-  signal data_in : std_logic_vector(7 downto 0) := X"32";
+  signal data_in : std_logic_vector(7 downto 0) := "00001111";
 
   --Outputs
   signal ov    : std_logic;
@@ -44,9 +44,9 @@ architecture behavior of cntr_tb is
 begin
  
 	-- Instanciación de Unit Under Test (UUT)
-  uut: cntr
+  uut: Counter
     generic map (
-      WIDTH => code'length
+      WIDTH => 8
     )
     port map (
       CLR_N   => clr_n,
@@ -69,14 +69,18 @@ begin
   end process;
 
   -- Definición de Stimulus process
-  clr_n  <= '0' after 0.25 * CLK_PERIOD, '1' after 0.75 * CLK_PERIOD;
-  load_n <= '0' after 0.25 * CLK_PERIOD, '1' after 1.75 * CLK_PERIOD;
-  up     <= '0' after 0.25 * CLK_PERIOD, '1' after 7.25 * CLK_PERIOD;
-  ce     <= '0' after 0.25 * CLK_PERIOD, '1' after 7.25 * CLK_PERIOD,
-            '0' after 8.25 * CLK_PERIOD;
+--  clr_n  <= '0' after 0.25 * CLK_PERIOD, '1' after 0.75 * CLK_PERIOD;
+--  load_n <= '0' after 0.25 * CLK_PERIOD, '1' after 1.75 * CLK_PERIOD;
+--  up     <= '0' after 0.25 * CLK_PERIOD, '1' after 7.25 * CLK_PERIOD;
+--  ce     <= '0' after 0.25 * CLK_PERIOD, '1' after 7.25 * CLK_PERIOD,
+--            '0' after 8.25 * CLK_PERIOD;
 
   stim_proc: process
   begin
+  ce <= '0', '1' after DELAY;
+  up <= '1';
+  clr_n <= '0', '1' after DELAY;
+  
     -- Comprobar CLR_N
     wait until clr_n = '0';
     wait for DELAY;
@@ -85,57 +89,83 @@ begin
       severity failure;
     wait until clk = '1';
     wait for DELAY;
-    assert to_integer(unsigned(code)) = 0
+    assert to_integer(unsigned(code)) = 1
       report "[FAILED]: CLR_N malfunction."
       severity failure;
 
     -- Comprobar LOAD_N
-    wait until load_n = '0';
+    load_n <= '0';
+    wait until clk = '1';
     wait for DELAY;
-    assert to_integer(unsigned(code)) = 32
+    assert to_integer(unsigned(code)) = 15
       report "[FAILED]: LOAD_N malfunction."
       severity failure;
-    wait until clk = '1';
-    wait for DELAY;
-    assert to_integer(unsigned(code)) = 32
-      report "[FAILED]: LOAD_N malfunction."
-      severity failure;
-
-    -- Comprobar countdown
-    wait until load_n = '1';
-    for i in 4 downto 1 loop
-      wait until clk = '1';
-      wait for DELAY;
-      assert ov = '0' and to_integer(unsigned(code)) = i
-        report "[FAILED]: countdown malfunction."
-        severity failure;
-    end loop;      
-    wait until clk = '1';
-    wait for DELAY;
-    assert ov = '1' and to_integer(unsigned(code)) = 0
-      report "[FAILED]: countdown malfunction."
-      severity failure;
-
-    -- Comprobar CE
-    wait until clk = '1';
-    wait for DELAY;
-    assert to_integer(unsigned(code)) = 0
-      report "[FAILED]: CE malfunction."
-      severity failure;
+--    wait until clk = '1';
+--    wait for DELAY;
+--    assert to_integer(unsigned(code)) = 32
+--      report "[FAILED]: LOAD_N malfunction."
+--      severity failure;
 
     -- Comprobar countup
-    for i in 1 to 4 loop
-      wait until clk = '1';
-      wait for DELAY;
-      assert ov = '0' and to_integer(unsigned(code)) = i
-        report "[FAILED]: countup malfunction."
+    load_n <= '1';
+    up <= '1';
+    clr_n <= '0', '1' after DELAY;
+    wait until clr_n = '1';
+    
+    for i in 1 to 100 loop
+        wait until clk = '1';
+        wait for DELAY;
+        
+        assert to_integer(unsigned(code)) = i mod 50
+        report "[FAILED]: countdown malfunction."
         severity failure;
-    end loop;      
+    end loop;
+    
+--    for i in 4 downto 1 loop
+--      wait until clk = '1';
+--      wait for DELAY;
+--      assert ov = '0' and to_integer(unsigned(code)) = i
+--        report "[FAILED]: countdown malfunction."
+--        severity failure;
+--    end loop;
+    
+    
+    --Comprobar OV
+    assert ov = '1'
+        report "[FAILED]: countdown malfunction."
+        severity failure;    
+
+
+    -- Comprobar CE
+    ce <= '0';
+    wait until clk = '1';
+    wait for DELAY;
+for i in 1 to 4 loop
+        wait until clk = '1';
+        wait for DELAY;
+        
+        assert to_integer(unsigned(code)) = 0
+        report "[FAILED]: CE malfunction."
+        severity failure;
+    end loop;
+
+    -- Comprobar countdown
+    ce <= '1';
+    up <= '0';
+for i in 99 downto 1 loop
+        wait until clk = '1';
+        wait for DELAY;
+        
+        assert to_integer(unsigned(code)) = i mod 50
+        report "[FAILED]: countdown malfunction."
+        severity failure;
+    end loop;    
 
     -- Fin de simulación
     assert false
       report "[SUCCESS]: Simulation finished."
       severity failure;
+
   end process;
 
 end;

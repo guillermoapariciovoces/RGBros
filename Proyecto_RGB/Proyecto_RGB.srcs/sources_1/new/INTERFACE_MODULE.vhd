@@ -103,6 +103,24 @@ architecture behavioral of INTERFACE_MODULE is
     signal final_output : std_logic_vector(6 downto 0);
     
     
+    COMPONENT Counter is
+    generic(
+            width : positive := 8;
+            mod_count : positive := 50
+        );
+    PORT (
+          clk : in std_logic;                                   --Clock
+          clr_n : in std_logic;                                 --Clear (negado)
+          ce : in std_logic;                                    --Chip Enable
+          up : in std_logic;                                    --Count Up (o Down)
+          load_n : in std_logic;                                --Carga datos
+          data_in : in std_logic_vector(width-1 downto 0);      --Valor a cargar
+          code : out std_logic_vector(width-1 downto 0);        --Valor a sacar
+          ov : out std_logic                                    --Indicador de Overflow
+        );
+end component;
+    
+    
     COMPONENT Prescaler
     GENERIC(
             reduction : positive := 4000000
@@ -162,7 +180,7 @@ begin
        );
         
     Inst_segment_decoder_3: Segment_Decoder PORT MAP(
-       code_bcd_in => bcd_output2,
+       code_bcd_in => bcd_output3,
        code_7s_out => number_output3
        );
      
@@ -177,21 +195,36 @@ begin
        input3 => "1111111",
        input4 => "1111111",
        input5 => "1111111",
-       input6 => number_output1,
+       input6 => number_output3,
        input7 => number_output2,
-       input8 => number_output3,
+       input8 => number_output1,
        selector => ciclo_selection,
        output => final_output
        );
      
-    Inst_prescaler: Prescaler PORT MAP(
-       clk_in => clk,
-       reset_n => reset_n,
-       clk_out => reduced_clk
-       );
+--    Inst_prescaler: Prescaler PORT MAP(
+--       clk_in => clk,
+--       reset_n => reset_n,
+--       clk_out => reduced_clk
+--       );
+       
+       Inst_counter: Counter
+        GENERIC MAP(
+            width => 20,
+            mod_count => 100000
+        )
+        PORT MAP(
+        clk => clk,
+        clr_n => reset_n,
+        ce => '1',
+        up => '1',
+        load_n => '1',
+        data_in => (others => '0'),
+        ov => reduced_clk
+        );
     
     Inst_ciclo: Ciclo PORT MAP(
-       clk => reduced_clk,
+       clk => reduced_clk,      
        reset_n => reset_n,
        hots => ciclo_selection
        );

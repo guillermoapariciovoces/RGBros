@@ -24,9 +24,9 @@ entity Counter is
 end Counter;
 
 architecture behavioral of Counter is
-    signal code_i : unsigned(width-1 downto 0);       --Señal sobre la que se actua
+    signal code_i : unsigned(width-1 downto 0):= (others => '0');       --Señal sobre la que se actua
 begin
-    process(clk)
+    process(clk, clr_n)
     begin
         if clr_n = '0' then
             code_i <= to_unsigned(0,code_i'length);
@@ -36,21 +36,22 @@ begin
                     code_i <= unsigned(data_in);
                 elsif up = '1' then
                     code_i <= (code_i + 1)mod mod_count;   --Bucle de cuenta positiva (overflow)
+                    if code_i = mod_count-1 then
+                        ov <= '1';
+                    else 
+                        ov <= '0';
+                    end if;
                 else -- up = '0'
                     code_i <= (code_i - 1 + mod_count)mod mod_count;    --Bucle de cuenta negativa (underflow)
+                    if code_i = 0 then
+                        ov <= '1';
+                    else 
+                        ov <= '0';
+                    end if;
                 end if;
             end if;
         end if;
     end process;
     code <= std_logic_vector(code_i);     --Asignación a la salida
-    
-    process(up, code_i)     --Checkeo de overflow
-    begin
-        ov <= '0';
-        if (up = '1') and (code_i = 2**width-1) then
-            ov <= '1';
-        elsif (up = '0') and (code_i = 0) then
-            ov <= '1';
-        end if;
-    end process;
+
 end;
