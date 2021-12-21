@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639565289">
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1640016471">
   <File Type="ROUTE-PWR" Name="top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="ROUTE-PWR-SUM" Name="top_power_summary_routed.pb"/>
@@ -17,7 +17,6 @@
   <File Type="BITSTR-MMI" Name="top.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="top_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="top.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="top.ltx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
@@ -49,6 +48,7 @@
   <File Type="PHYSOPT-DCP" Name="top_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="top_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="top_postroute_physopt_bb.dcp"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="top_methodology_drc_routed.pb"/>
   <File Type="ROUTE-DRC-RPX" Name="top_drc_routed.rpx"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="top_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="top.pdi"/>
@@ -57,11 +57,11 @@
   <File Type="RNPI_FILE" Name="top.rnpi"/>
   <File Type="NPI_FILE" Name="top.npi"/>
   <File Type="RBD_FILE" Name="top.rbd"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/BCD_Decoder.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/BCD_Decoder.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/BCD_Decoder.vhd"/>
         <Attr Name="ImportTime" Val="1638814441"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -69,7 +69,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Ciclo.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Ciclo.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Ciclo.vhd"/>
         <Attr Name="ImportTime" Val="1638814505"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -77,7 +77,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Comparator.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Comparator.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Comparator.vhd"/>
         <Attr Name="ImportTime" Val="1638791294"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -85,19 +85,23 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/FSM_MASTER_2_0.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MASTER_2_0.vhd"/>
+        <Attr Name="ImportTime" Val="1639565116"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/FSM_MODULE_2_0.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE_2_0.vhd"/>
+        <Attr Name="ImportTime" Val="1639909243"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/INPUT_MODULE.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/INPUT_MODULE.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INPUT_MODULE.vhd"/>
         <Attr Name="ImportTime" Val="1639134499"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -105,7 +109,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/INTERFACE_MODULE.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/INTERFACE_MODULE.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/INTERFACE_MODULE.vhd"/>
         <Attr Name="ImportTime" Val="1639212211"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -113,7 +117,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Letter_Decoder.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Letter_Decoder.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Letter_Decoder.vhd"/>
         <Attr Name="ImportTime" Val="1639212240"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -121,7 +125,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Mux_3x8.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux_3x8.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_3x8.vhd"/>
         <Attr Name="ImportTime" Val="1639210661"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -129,7 +133,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Mux_8x7.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux_8x7.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux_8x7.vhd"/>
         <Attr Name="ImportTime" Val="1639210644"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -137,7 +141,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/OUTPUT_MODULE.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/OUTPUT_MODULE.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/OUTPUT_MODULE.vhd"/>
         <Attr Name="ImportTime" Val="1639211829"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -145,7 +149,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Prescaler.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Prescaler.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Prescaler.vhd"/>
         <Attr Name="ImportTime" Val="1639211904"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -153,7 +157,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/cntr.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/cntr.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/cntr.vhd"/>
         <Attr Name="ImportTime" Val="1638794201"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -161,7 +165,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/decoder.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/decoder.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/decoder.vhd"/>
         <Attr Name="ImportTime" Val="1638797767"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -169,7 +173,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/edgedtctr.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/edgedtctr.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/edgedtctr.vhd"/>
         <Attr Name="ImportTime" Val="1639119848"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -177,7 +181,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/snchnzr.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/snchnzr.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/snchnzr.vhd"/>
         <Attr Name="ImportTime" Val="1639119829"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -185,8 +189,26 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/top.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/top.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/top.vhd"/>
         <Attr Name="ImportTime" Val="1639212182"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test_interface.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB_2020/Proyecto_RGB_2020.srcs/sources_1/new/test_interface.vhd"/>
+        <Attr Name="ImportTime" Val="1640013860"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/top_interface.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB_2020/Proyecto_RGB_2020.srcs/sources_1/new/top_interface.vhd"/>
+        <Attr Name="ImportTime" Val="1640013048"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -194,7 +216,7 @@
     <File Path="$PSRCDIR/sources_1/new/FSM_MODULE.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_MODULE.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_MODULE.vhd"/>
         <Attr Name="ImportTime" Val="1639212158"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -203,7 +225,7 @@
     <File Path="$PSRCDIR/sources_1/new/FSM_Master.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Master.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Master.vhd"/>
         <Attr Name="ImportTime" Val="1639212102"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -212,7 +234,7 @@
     <File Path="$PSRCDIR/sources_1/new/FSM_Slave.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/FSM_Slave.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/FSM_Slave.vhd"/>
         <Attr Name="ImportTime" Val="1639372155"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -221,7 +243,7 @@
     <File Path="$PSRCDIR/sources_1/new/Mux.vhd">
       <FileInfo SFType="VHDL2008">
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Mux.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Mux.vhd"/>
         <Attr Name="ImportTime" Val="1639210355"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -230,7 +252,7 @@
     <File Path="$PSRCDIR/sources_1/new/Segment_Decoder.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/Segment_Decoder.vhd"/>
+        <Attr Name="ImportPath" Val="G:/SED/Proyecto_RGB/Proyecto_RGB.srcs/sources_1/new/Segment_Decoder.vhd"/>
         <Attr Name="ImportTime" Val="1638630632"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -239,14 +261,13 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="top"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/RGBros/Nexys-4-DDR-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../Nexys-4-DDR-Master.xdc"/>
+        <Attr Name="ImportPath" Val="G:/SED/Nexys-4-DDR-Master.xdc"/>
         <Attr Name="ImportTime" Val="1638119512"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -263,7 +284,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

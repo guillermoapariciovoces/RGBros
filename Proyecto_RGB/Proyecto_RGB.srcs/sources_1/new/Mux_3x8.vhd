@@ -23,8 +23,8 @@ architecture behavioral of Mux_3x8 is
 begin
     
     with selector select
-        output <= input1 when "1--",
-                  input2 when "01-",
+        output <= input1 when "100",
+                  input2 when "010",
                   input3 when "001",
                   "11111111" when others;
 

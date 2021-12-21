@@ -30,7 +30,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity FSM_MODULE_2_0 is
 generic(
-    width : positive := 8
+    width : positive := 8;
+    mod_count : positive := 101
         );
 port (
         reset_n     : in std_logic; --Reset Negado asincrono
@@ -54,7 +55,7 @@ Signal azul_signal        : std_logic_vector(1 downto 0);
     COMPONENT Counter
     GENERIC(
             width : positive := width;
-            mod_count : positive := 50
+            mod_count : positive := mod_count
             );
     PORT(
         clk : in std_logic;                           --Clock
@@ -93,7 +94,7 @@ Inst_counter_RED: Counter PORT MAP(
         clr_n => reset_n,
         ce => rojo_signal(1),
         up => rojo_signal(0),
-        load_n => '0',
+        load_n => '1',
         data_in =>(others => '0'),
         code => ROJO
         );      
@@ -102,7 +103,7 @@ Inst_counter_GREEN: Counter PORT MAP(
         clr_n => reset_n,
         ce => VERDE_signal(1),
         up => VERDE_signal(0),
-        load_n => '0',
+        load_n => '1',
         data_in => (others => '0'),
         code => VERDE
         );      
@@ -111,7 +112,7 @@ Inst_counter_BLUE: Counter PORT MAP(
         clr_n => reset_n,
         ce => AZUL_signal(1),
         up => AZUL_signal(0),
-        load_n => '0',
+        load_n => '1',
         data_in => (others => '0'),
         code => AZUL
         );      

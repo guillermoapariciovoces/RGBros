@@ -9,7 +9,7 @@ entity OUTPUT_MODULE is
     generic(
             width : positive := 8;                      -- Tamaño de las variables
             level_range : positive := 50;               -- Nº de niveles RGB posible
-            prescaler_reduction : positive := 400000    -- Reducción de la temporización para los 7-segmentos
+            prescaler_reduction : positive := 10000000    -- Reducción de la temporización para los 7-segmentos
             );
     port(
          clk : in std_logic;                                    --Clock
@@ -25,8 +25,8 @@ end OUTPUT_MODULE;
 
 architecture behavioral of OUTPUT_MODULE is
 
-signal counter2comparator : std_logic_vector(width-1  downto 0);
-signal prescaler_out : std_logic;
+    signal counter2comparator : std_logic_vector(width-1  downto 0);
+    signal prescaler_out : std_logic;
 
 
     COMPONENT Counter
@@ -84,7 +84,7 @@ begin
         ce => '1',
         up => '1',
         load_n => '1',
-        data_in => "00000000",
+        data_in => (others => '0'),
         code => counter2comparator
         );
         

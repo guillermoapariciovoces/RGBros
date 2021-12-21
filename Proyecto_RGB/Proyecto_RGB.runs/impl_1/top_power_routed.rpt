@@ -1,8 +1,8 @@
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Wed Dec 15 11:49:49 2021
-| Host             : DESKTOP-9L1N67Q running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date             : Mon Dec 20 17:09:56 2021
+| Host             : DESKTOP-LUOLEOF running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.103        |
+| Total On-Chip Power (W)  | 0.122        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.006        |
+| Dynamic (W)              | 0.025        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 84.5         |
-| Junction Temperature (C) | 25.5         |
+| Max Ambient (C)          | 84.4         |
+| Junction Temperature (C) | 25.6         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |    <0.001 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |      164 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |       51 |     63400 |            0.08 |
-|   Register              |    <0.001 |       60 |    126800 |            0.05 |
-|   CARRY4                |    <0.001 |        8 |     15850 |            0.05 |
+| Clocks                  |     0.001 |        3 |       --- |             --- |
+| Slice Logic             |     0.002 |      558 |       --- |             --- |
+|   LUT as Logic          |     0.002 |      286 |     63400 |            0.45 |
+|   CARRY4                |    <0.001 |       44 |     15850 |            0.28 |
+|   Register              |    <0.001 |      106 |    126800 |            0.08 |
+|   F7/F8 Muxes           |    <0.001 |        8 |     63400 |            0.01 |
 |   LUT as Shift Register |    <0.001 |        4 |     19000 |            0.02 |
-|   Others                |     0.000 |       22 |       --- |             --- |
-| Signals                 |    <0.001 |      136 |       --- |             --- |
-| I/O                     |     0.005 |       30 |       210 |           14.29 |
+|   Others                |     0.000 |       33 |       --- |             --- |
+| Signals                 |     0.002 |      417 |       --- |             --- |
+| I/O                     |     0.019 |       30 |       210 |           14.29 |
 | Static Power            |     0.097 |          |           |                 |
-| Total                   |     0.103 |          |           |                 |
+| Total                   |     0.122 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.001 |      0.015 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.005 |       0.001 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.021 |       0.006 |      0.015 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,10 +139,14 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------+-----------+
-| Name | Power (W) |
-+------+-----------+
-| top  |     0.006 |
-+------+-----------+
++-------------------------+-----------+
+| Name                    | Power (W) |
++-------------------------+-----------+
+| top                     |     0.025 |
+|   Inst_fsm_module       |     0.003 |
+|     Inst_FSM_Master     |     0.001 |
+|   Inst_interface_module |     0.001 |
+|     Inst_counter        |     0.001 |
++-------------------------+-----------+
 
 

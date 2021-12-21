@@ -1,25 +1,7 @@
-Vivado Simulator v2021.2
-Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot INTERFACE_MODULE_tb_behav xil_defaultlib.INTERFACE_MODULE_tb -log elaborate.log 
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto f3dfd4df09b54b4bb6424f0836a16c63 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot INTERFACE_MODULE_tb_behav xil_defaultlib.INTERFACE_MODULE_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.std_logic_arith
-Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.Mux_3x8 [mux_3x8_default]
-Compiling architecture behavioral of entity xil_defaultlib.BCD_Decoder [bcd_decoder_default]
-Compiling architecture dataflow of entity xil_defaultlib.Segment_Decoder [segment_decoder_default]
-Compiling architecture dataflow of entity xil_defaultlib.Letter_Decoder [letter_decoder_default]
-Compiling architecture behavioral of entity xil_defaultlib.Mux_8x7 [mux_8x7_default]
-Compiling architecture behavioral of entity xil_defaultlib.Counter [\Counter(width=20,mod_count=1000...]
-Compiling architecture behavioral of entity xil_defaultlib.Ciclo [\Ciclo(outputs=8)\]
-Compiling architecture behavioral of entity xil_defaultlib.INTERFACE_MODULE [interface_module_default]
-Compiling architecture behavioral of entity xil_defaultlib.interface_module_tb
-Built simulation snapshot INTERFACE_MODULE_tb_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

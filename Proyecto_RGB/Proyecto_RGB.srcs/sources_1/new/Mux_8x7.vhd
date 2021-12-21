@@ -28,13 +28,13 @@ architecture behavioral of Mux_8x7 is
 begin
     
     with selector select
-        output <= input1 when "1-------",
-                  input2 when "01------",
-                  input3 when "001-----",
-                  input4 when "0001----",
-                  input5 when "00001---",
-                  input6 when "000001--",
-                  input7 when "0000001-",
+        output <= input1 when "10000000",
+                  input2 when "01000000",
+                  input3 when "00100000",
+                  input4 when "00010000",
+                  input5 when "00001000",
+                  input6 when "00000100",
+                  input7 when "00000010",
                   input8 when "00000001",
                   "1111111" when others;
 

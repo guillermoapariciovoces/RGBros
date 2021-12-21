@@ -1,8 +1,8 @@
-Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 15 11:49:10 2021
-| Host         : DESKTOP-9L1N67Q running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
+| Date         : Mon Dec 20 17:09:23 2021
+| Host         : DESKTOP-LUOLEOF running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     4 |
-|    Minimum number of control sets                        |     4 |
+| Total control sets                                       |     8 |
+|    Minimum number of control sets                        |     8 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |     4 |
+| Unused register locations in slices containing registers |    22 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,10 +39,10 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     4 |
+| Total control sets |     8 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     0 |
+| >= 6 to < 8        |     4 |
 | >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              24 |           10 |
-| No           | No                    | Yes                    |              32 |            9 |
+| No           | No                    | No                     |              25 |            9 |
+| No           | No                    | Yes                    |              56 |           14 |
 | No           | Yes                   | No                     |               0 |            0 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |               4 |            3 |
+| Yes          | No                    | Yes                    |              25 |           16 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,13 +70,17 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
-|                      Clock Signal                     |                              Enable Signal                              |               Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG                                        | Inst_fsm_module/Inst_FSM_Master/FSM_sequential_current_state[3]_i_1_n_0 | Inst_interface_module/Inst_prescaler/reset_n |                3 |              4 |         1.33 |
-|  Inst_interface_module/Inst_prescaler/clk_out_i_reg_0 |                                                                         |                                              |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                                        |                                                                         |                                              |                7 |             20 |         2.86 |
-|  clk_IBUF_BUFG                                        |                                                                         | Inst_interface_module/Inst_prescaler/reset_n |                9 |             32 |         3.56 |
-+-------------------------------------------------------+-------------------------------------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
++----------------------------------------------------+--------------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|                    Clock Signal                    |                               Enable Signal                              |              Set/Reset Signal             | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------------------------+--------------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG                                     | Inst_fsm_module/Inst_FSM_Master/FSM_sequential_current_state[3]_i_1_n_0  | Inst_output_module/Inst_prescaler/reset_n |                2 |              4 |         2.00 |
+|  Inst_output_module/Inst_prescaler/clk_out_i_reg_0 |                                                                          | Inst_output_module/Inst_prescaler/reset_n |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                                     | Inst_fsm_module/Inst_FSM_Master/E[0]                                     | Inst_output_module/Inst_prescaler/reset_n |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG                                     | Inst_fsm_module/Inst_FSM_Master/FSM_sequential_current_state_reg[3]_3[0] | Inst_output_module/Inst_prescaler/reset_n |                4 |              7 |         1.75 |
+|  clk_IBUF_BUFG                                     | Inst_fsm_module/Inst_FSM_Master/FSM_sequential_current_state_reg[3]_2[0] | Inst_output_module/Inst_prescaler/reset_n |                5 |              7 |         1.40 |
+|  Inst_interface_module/Inst_counter/CLK            |                                                                          |                                           |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG                                     |                                                                          |                                           |                7 |             21 |         3.00 |
+|  clk_IBUF_BUFG                                     |                                                                          | Inst_output_module/Inst_prescaler/reset_n |               12 |             49 |         4.08 |
++----------------------------------------------------+--------------------------------------------------------------------------+-------------------------------------------+------------------+----------------+--------------+
 
 

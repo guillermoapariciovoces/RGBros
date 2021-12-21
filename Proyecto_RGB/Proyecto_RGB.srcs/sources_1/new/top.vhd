@@ -5,6 +5,10 @@ use ieee.std_logic_arith.ALL;
 
 
 entity top is
+    GENERIC(
+        width : positive := 8;
+        mod_count : positive := 101
+    );
     PORT(  reset_n : in std_logic;                     --Reset (negado)
             clk: in std_logic;                          --Reloj
             button : in std_logic_vector(3 downto 0);   --Botones de selección
@@ -17,8 +21,6 @@ entity top is
 end top;
 
 architecture behavioral of top is
-    signal sync2edge: std_logic_vector(3 downto 0);           --Señal que sale del sincronizador al detector de flancos
-    signal edge2fsm: std_logic_vector(3 downto 0);            --Señal del detector de flancos a la máquina de estados
 
     COMPONENT INPUT_MODULE
         generic(
@@ -33,7 +35,8 @@ architecture behavioral of top is
     
     COMPONENT FSM_MODULE_2_0
         generic(
-                width : positive := 8
+                width : positive := width;
+                mod_count : positive := mod_count
                 );
         port(
              reset_n     : in std_logic; --Reset Negado asincrono
@@ -50,9 +53,9 @@ architecture behavioral of top is
     
     COMPONENT OUTPUT_MODULE
         generic(
-            width : positive := 8;                      -- Tamaño de las variables
-            level_range : positive := 50;               -- Nº de niveles RGB posible
-            prescaler_reduction : positive := 100000    -- Reducción de la temporización para los 7-segmentos
+            width : positive := width;                      -- Tamaño de las variables
+            level_range : positive := mod_count;               -- Nº de niveles RGB posible
+            prescaler_reduction : positive := 10000    -- Reducción de la temporización para los 7-segmentos
             );
         port(
             clk : in std_logic;                                    --Clock
@@ -68,7 +71,7 @@ architecture behavioral of top is
     
     COMPONENT INTERFACE_MODULE
         generic(
-            width : positive := 8       --Tamaño de palabra de los valores
+            width : positive := width       --Tamaño de palabra de los valores
         );
         port(
             clk : in std_logic;                                    --Clock
@@ -135,10 +138,10 @@ begin
     
     led(5 downto 3) <= color_info;
     
-    rgb(0) <=  red2output;
-    rgb(1) <=  green2output;
-    rgb(2) <=  blue2output;
-    led(2) <=  red2output;
-    led(1) <=  green2output;
-    led(0) <=  blue2output;
+    rgb(0) <= red2output;
+    rgb(1) <= green2output;
+    rgb(2) <= blue2output;
+    led(2) <= red2output;
+    led(1) <= green2output;
+    led(0) <= blue2output;
 end behavioral;

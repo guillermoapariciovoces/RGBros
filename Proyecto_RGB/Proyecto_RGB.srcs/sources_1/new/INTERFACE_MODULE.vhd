@@ -105,8 +105,8 @@ architecture behavioral of INTERFACE_MODULE is
     
     COMPONENT Counter is
     generic(
-            width : positive := 8;
-            mod_count : positive := 50
+            width : positive := 25;
+            mod_count : positive := 100000000
         );
     PORT (
           clk : in std_logic;                                   --Clock
