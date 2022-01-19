@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2020.1 (64-bit)
-# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Mon Dec 20 17:08:50 2021
-# Process ID: 3604
-# Current directory: E:/SED/Proyecto_RGB_2020/Proyecto_RGB_2020.runs/impl_1
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jan 19 15:52:06 2022
+# Process ID: 11868
+# Current directory: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/impl_1
 # Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
-# Log file: E:/SED/Proyecto_RGB_2020/Proyecto_RGB_2020.runs/impl_1/top.vdi
-# Journal file: E:/SED/Proyecto_RGB_2020/Proyecto_RGB_2020.runs/impl_1\vivado.jou
+# Log file: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/impl_1/top.vdi
+# Journal file: D:/Documents/RGBros/Proyecto_RGB/Proyecto_RGB.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace

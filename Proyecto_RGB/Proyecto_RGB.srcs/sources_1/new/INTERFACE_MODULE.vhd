@@ -208,7 +208,7 @@ begin
 --       clk_out => reduced_clk
 --       );
        
-       Inst_counter: Counter
+       Inst_divisor: Counter
         GENERIC MAP(
             width => 20,
             mod_count => 100000

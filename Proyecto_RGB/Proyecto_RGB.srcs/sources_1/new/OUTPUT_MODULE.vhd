@@ -26,7 +26,7 @@ end OUTPUT_MODULE;
 architecture behavioral of OUTPUT_MODULE is
 
     signal counter2comparator : std_logic_vector(width-1  downto 0);
-    signal prescaler_out : std_logic;
+    signal reduced_clk : std_logic;
 
 
     COMPONENT Counter
@@ -72,14 +72,24 @@ architecture behavioral of OUTPUT_MODULE is
 
 begin
     
-    Inst_prescaler: Prescaler PORT MAP(
-        clk_in => clk,
-        reset_n => reset_n,
-        clk_out => prescaler_out
+    Inst_divisor: Counter
+        GENERIC MAP(
+            width => 20,
+            mod_count => 1000000
+        )
+        PORT MAP(
+        clk => clk,
+        clr_n => reset_n,
+        ce => '1',
+        up => '1',
+        load_n => '1',
+        data_in => (others => '0'),
+        ov => reduced_clk
         );
+   
     
     Inst_counter: Counter PORT MAP(
-        clk => prescaler_out,
+        clk => reduced_clk,
         clr_n => reset_n,
         ce => '1',
         up => '1',
